@@ -1,0 +1,51 @@
+Psephos retained sources
+
+Primary witness: Aristotelis Atheniensium Respublica, edited by Frederic G.
+Kenyon, Oxford, Clarendon Press, 1920. University of Connecticut Libraries copy,
+Internet Archive identifier aristotelisathen00aris.
+https://archive.org/details/aristotelisathen00aris
+
+kenyon-p67.jpg and kenyon-p68.jpg are complete printed pages LXVII and
+LXVIII, obtained from the Internet Archive JP2 page-image service at scale 1, then
+rescaled proportionally to a maximum width of 1800 pixels and JPEG quality 90.
+Archive JP2 leaves 81 and 82 correspond to PDF pages 81 and 82.
+The derived PDF omits an earlier scan, so its zero-based object index is not
+the same as the original JP2 filename index. The printed page headings were
+visually checked on both retained images. The ancient text and this
+1920 edition are public domain in the United States. The page images preserve
+the context, lacunae, editorial supplements and critical apparatus. Image
+rendering changes scale and compression; it does not crop or alter the text.
+The selected Greek was transcribed from these images. Square brackets in the
+printed main text are retained. Sentence punctuation, apostrophe glyphs and
+capitalization at excerpt openings are normalized. New close English and word
+notes are by Anthony Mercer, MIT license. The work is conventionally attributed
+to Aristotle; its individual authorship is debated. It describes late fourth
+century BCE institutions, not all Athenian history.
+
+Independent comparison: Perseus Digital Library, Trustees of Tufts University,
+canonical-greekLit, tlg0086.tlg003.perseus-grc2.xml. Retrieved 2026-10-29.
+https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0086/tlg003/tlg0086.tlg003.perseus-grc2.xml
+The XML is retained unchanged under CC BY-SA 4.0; see CC-BY-SA-4.0.txt.
+Its transcription has variant readings and supplies in these passages and is
+not the workshop's exact transcription of the retained print. In particular,
+the λα[βὼν ἅμα] and [αὐλίσκον] supplies in 68.4, and the double-bracketed
+clause at the end of
+the counting excerpt, follow the printed witness, not a flattening of the XML.
+
+agora-ballots.jpg: Zde, 'Ballots, ca 300 BC, AGMA, 225285.jpg', photograph
+10 June 2022, Museum of the Ancient Agora, Athens. CC BY-SA 4.0.
+https://commons.wikimedia.org/wiki/File:Ballots,_ca_300_BC,_AGMA,_225285.jpg
+https://creativecommons.org/licenses/by-sa/4.0/
+Retained as the Wikimedia 1280-pixel thumbnail, rescaled and recompressed by
+Wikimedia; no crop or recoloring by this project. The photographer's caption
+dates the objects to around 300 BCE. That date is attributed, not an independent
+archaeological determination by this workshop. The photograph is separate from
+the original schematic drawings and is not presented as a physical replica.
+
+Object comparison consulted, no photograph reproduced: Canellopoulos Museum,
+'Bronze juridical ballot', collection X 600, fourth century BCE.
+https://camu.gr/en/item/chalkini-dikastiki-psifos/
+
+Code, new diagrams and translations: MIT (public/LICENSE.txt).
+Fonts: Literata and Source Sans 3, SIL Open Font License, files in ../fonts/.
+CC BY-SA material retains its own license within the collection and exports.

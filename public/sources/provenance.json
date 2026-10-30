@@ -1,0 +1,40 @@
+{
+  "edition": "F. G. Kenyon, Aristotelis Atheniensium Respublica, Oxford, 1920",
+  "retrieved": "2026-10-29",
+  "archive": "https://archive.org/details/aristotelisathen00aris",
+  "pdf": {
+    "url": "https://archive.org/download/aristotelisathen00aris/aristotelisathen00aris.pdf",
+    "sha256": "2769f1feea49780c864ce0118723f02082df9177ede52ff511574f5fdcb9ba91"
+  },
+  "pages": [
+    {
+      "leaf": 81,
+      "printedPage": "LXVII",
+      "pdfPage": 81,
+      "source": "https://ia600507.us.archive.org/BookReader/BookReaderImages.php?zip=/28/items/aristotelisathen00aris/aristotelisathen00aris_jp2.zip&file=aristotelisathen00aris_jp2/aristotelisathen00aris_0081.jp2&id=aristotelisathen00aris&scale=1&rotate=0",
+      "originalJpegSha256": "134441b2a6dfcac8de5f6b644179304820659a163e9daadd57d2a3d8b616b7d5",
+      "conversion": "Pillow thumbnail within 1800x3000, JPEG quality 90; complete archive page, no project crop",
+      "visuallyCheckedPrintedHeading": "LXVII"
+    },
+    {
+      "leaf": 82,
+      "printedPage": "LXVIII",
+      "pdfPage": 82,
+      "source": "https://ia600507.us.archive.org/BookReader/BookReaderImages.php?zip=/28/items/aristotelisathen00aris/aristotelisathen00aris_jp2.zip&file=aristotelisathen00aris_jp2/aristotelisathen00aris_0082.jp2&id=aristotelisathen00aris&scale=1&rotate=0",
+      "originalJpegSha256": "1a45ec88ac373edaf0d9cb250463fb33077633e347f352bba5e0796e78c3402a",
+      "conversion": "Pillow thumbnail within 1800x3000, JPEG quality 90; complete archive page, no project crop",
+      "visuallyCheckedPrintedHeading": "LXVIII"
+    }
+  ],
+  "photo": {
+    "author": "Zde",
+    "source": "https://commons.wikimedia.org/wiki/File:Ballots,_ca_300_BC,_AGMA,_225285.jpg",
+    "license": "CC BY-SA 4.0",
+    "retrievedUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Ballots%2C_ca_300_BC%2C_AGMA%2C_225285.jpg/1280px-Ballots%2C_ca_300_BC%2C_AGMA%2C_225285.jpg"
+  },
+  "comparison": {
+    "source": "https://raw.githubusercontent.com/PerseusDL/canonical-greekLit/master/data/tlg0086/tlg003/tlg0086.tlg003.perseus-grc2.xml",
+    "license": "CC BY-SA 4.0",
+    "policy": "Retained unchanged; the workshop Greek was transcribed from the scan and has different editorial supplies."
+  }
+}
