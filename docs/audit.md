@@ -166,12 +166,13 @@ no worker installed. Publication receipts will identify the reviewed source
 and deployed edition.
 
 
-## Public edition
+## Initial public edition
 
 [Open Psephos](https://antonsoo.github.io/psephos/). The reviewed source is
 `2deaf7db790c343b8a6fbfedb6f88ee2755a04e1`; the deployed `gh-pages` commit is
 `e1568f63fe5c54cfb40adf14384681fd32c68861`, edition
-`80a1776f6e15df80ae5d`. Later documentation-only commits do not change that build.
+`80a1776f6e15df80ae5d`. Documentation-only commits following that review did not change that build.
+The multi-page follow-up below supersedes its worker.
 
 The [public-browser receipt](audit/public-browser.json) compares **every one of
 21 hosted build files** byte for byte with the reviewed `dist/`, without request
@@ -195,3 +196,29 @@ The source **Check** and **Pages** workflows returned failure with empty step
 lists. Those runs are not passing source CI, and are not used as evidence for
 the local application build or the public learner journey. Their IDs, results
 and available job steps are retained in the source receipt.
+
+
+## Multi-page follow-up
+
+A second pass caught a gap in the first fix. The page that discovered a bad
+source withdrew readiness, but another open page kept its affirmative claim.
+This was reproduced against the public edition in both browsers; the
+[before receipt](audit/multi-page-before.json) preserves both footers.
+
+Inventory inspection now notifies all controlled pages when it discovers
+storage damage, including failures first found by a page's direct cached read.
+The worker sends one invalidation per damaged episode. It verifies the entire
+stored inventory before announcing restoration; all pages then recheck that
+inventory. A single successful download cannot establish readiness. This
+avoids a notification/reinspection feedback loop while also notifying other
+pages when the origin returns without a browser `online` event.
+
+The [fresh Node 24 build](audit/multi-page/clean-build.json) matches all 21 files
+of the reviewed Node 26 output. The native JSON, SVG and illustrated HTML are
+unchanged. The [complete browser regression](audit/multi-page/local-browser.json)
+repeats casting, the deduction, source readings, actual artifacts and real
+outages at both widths in both engines. All twenty screenshots were visually
+inspected. The [two-page audit](audit/multi-page/local-readiness.json) checks
+both footers on failure and recovery, rejects foreign notifications, checks
+that a repeated failure produces no additional invalidation, and exercises a
+waiting edition. The earlier receipts remain evidence of their own builds.

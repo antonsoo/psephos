@@ -174,7 +174,9 @@ The source viewer cancels superseded requests and ignores late responses.
 The production builder generates an edition from the entire output inventory.
 The worker checks length and SHA-256 during installation and when reading
 cached files. Offline readiness requires a matching current controller and
-complete inventory. A damaged cache loses its readiness claim; it is repaired
+complete inventory. All open pages withdraw readiness when storage damage is discovered and recheck
+after the entire inventory is verified again. Repeated failure notifications
+are coalesced. A damaged cache loses its readiness claim; it is repaired
 only with matching edition bytes when the origin becomes available again.
 
 ## Verification and limits

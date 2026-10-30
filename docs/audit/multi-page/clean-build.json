@@ -1,0 +1,28 @@
+{
+  "sourceCommit": "0869ad942017a0b25a2463a39f04fddb546684a6",
+  "node": "24.22.2",
+  "freshArchive": true,
+  "commands": ["npm ci", "npm run check", "npm run test:browser", "npm run test:audit"],
+  "focusedTests": 13,
+  "completeBuildFiles": 21,
+  "completeBuildBytes": 3273080,
+  "buildManifestSha256": "8c0e19ad009cd7c42f8eba3cc595ff58ce64ba159c9f6fea03533e44309b33ea",
+  "byteIdenticalToReviewedNode26Build": true,
+  "unchangedActualNativeExamples": [
+    {
+      "path": "examples/last-vote-record.json",
+      "bytes": 1125,
+      "sha256": "039a4949ba2b49c0f43d57c5f6b0ee9047cd750dcceec09587e62da655c89149"
+    },
+    {
+      "path": "examples/last-vote-count.svg",
+      "bytes": 3886,
+      "sha256": "cd25922e61c6646866c35d83a0b6aedd55678a487899cad648292fb09c370695"
+    },
+    {
+      "path": "examples/last-vote-record.html.gz",
+      "bytes": 3412486,
+      "sha256": "e4451ebe2b681bde20d9d69152d0a2cf606568bc55d53fa7d92e3c2cc535011e"
+    }
+  ]
+}

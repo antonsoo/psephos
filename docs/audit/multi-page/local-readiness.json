@@ -1,0 +1,37 @@
+{
+  "editionA": "22212bb56b0620317536",
+  "editionB": "981d5c39881f35fa9696",
+  "workerBuilderSha256": "7d2e4c21882e77f95c4e0d7e8b00d51d4d1b28b39b53e9ce23c7d8968b4bbe4a",
+  "results": [
+    {
+      "browser": "chromium",
+      "initialEdition": "22212bb56b0620317536",
+      "explicitOfflineIntegrityFailureWithdrawsReadiness": true,
+      "nativeImageFailureWithdrawsReadiness": true,
+      "otherOpenPageAutomaticallyWithdrawsReadiness": true,
+      "repeatedFailureNotificationsCoalesced": true,
+      "otherEditionCacheNotUsed": true,
+      "uncachedNavigationNotInvented": true,
+      "connectedRecovery": true,
+      "foreignReadinessEventsIgnored": true,
+      "oldEditionKeptWhileOpen": true,
+      "nextEditionActivatedAfterClose": true,
+      "explanationPreservedAcrossUpdate": true
+    },
+    {
+      "browser": "firefox",
+      "initialEdition": "22212bb56b0620317536",
+      "explicitOfflineIntegrityFailureWithdrawsReadiness": true,
+      "nativeImageFailureWithdrawsReadiness": true,
+      "otherOpenPageAutomaticallyWithdrawsReadiness": true,
+      "repeatedFailureNotificationsCoalesced": true,
+      "otherEditionCacheNotUsed": true,
+      "uncachedNavigationNotInvented": true,
+      "connectedRecovery": true,
+      "foreignReadinessEventsIgnored": true,
+      "oldEditionKeptWhileOpen": true,
+      "nextEditionActivatedAfterClose": true,
+      "explanationPreservedAcrossUpdate": true
+    }
+  ]
+}
