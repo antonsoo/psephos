@@ -17,6 +17,7 @@ export function installOffline(status: HTMLElement): void {
       status.textContent = "Preparing this edition for offline reading…";
       return;
     }
+    status.textContent = "Checking this edition’s offline files…";
     const channel = new MessageChannel();
     const timeout = window.setTimeout(() => {
       channel.port1.close();
@@ -37,6 +38,14 @@ export function installOffline(status: HTMLElement): void {
     controller.postMessage({ type: "inventory", repair: navigator.onLine }, [channel.port2]);
   }
   navigator.serviceWorker.addEventListener("controllerchange", () => {
+    void inspect();
+  });
+  navigator.serviceWorker.addEventListener("message", (event: MessageEvent<unknown>) => {
+    if (event.source !== navigator.serviceWorker.controller) return;
+    const value = event.data as { type?: unknown; edition?: unknown } | null;
+    if (value?.type === "inventory-invalidated" && value.edition === expected) void inspect();
+  });
+  window.addEventListener("psephos:asset-failure", () => {
     void inspect();
   });
   window.addEventListener("online", () => {

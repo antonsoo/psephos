@@ -37,6 +37,10 @@ const CACHE = 'psephos-' + EDITION;
 const FILES = ${JSON.stringify(files)};
 const allowed = new Map(FILES.map(file => [new URL(file.url, self.location.origin).href, file]));
 const digest = async bytes => Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)), b => b.toString(16).padStart(2, '0')).join('');
+async function invalidateClients() {
+  const pages = await self.clients.matchAll({type:'window'});
+  for (const page of pages) page.postMessage({type:'inventory-invalidated',edition:EDITION});
+}
 async function matches(response, file) {
   if (!response || !response.ok) return false;
   const bytes = await response.arrayBuffer();
@@ -75,6 +79,7 @@ self.addEventListener('fetch', event => {
   event.respondWith((async () => {
     const saved = await caches.match(url.href, {cacheName:CACHE});
     if (saved && await matches(saved.clone(), file)) return saved;
+    await invalidateClients();
     try {
       const response = await fetchEdition(file);
       try {await (await caches.open(CACHE)).put(file.url, response.clone());}

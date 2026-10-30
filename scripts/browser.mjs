@@ -1,62 +1,20 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
-import { createServer } from "node:http";
-import { extname, resolve } from "node:path";
+import { resolve } from "node:path";
 import { gzipSync } from "node:zlib";
 import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
+import { reviewServer } from "./review-server.mjs";
 
 const out = resolve(process.argv[2] || "test-results/browser");
 await mkdir(out, { recursive: true });
 const dist = resolve("dist");
 const hash = (b) => createHash("sha256").update(b).digest("hex");
 const assets = JSON.parse(await readFile("src/asset-manifest.json", "utf8"));
-const mime = {
-  ".html": "text/html",
-  ".js": "text/javascript",
-  ".css": "text/css",
-  ".json": "application/json",
-  ".woff2": "font/woff2",
-  ".jpg": "image/jpeg",
-  ".svg": "image/svg+xml",
-  ".xml": "application/xml",
-  ".txt": "text/plain",
-};
-let server;
-let port = 0;
-async function start() {
-  server = createServer(async (req, res) => {
-    const pathname = new URL(req.url, "http://localhost").pathname;
-    if (!pathname.startsWith("/psephos/")) {
-      res.writeHead(404).end();
-      return;
-    }
-    const relative = decodeURIComponent(pathname.slice(9)) || "index.html";
-    const target = resolve(dist, relative);
-    if (!target.startsWith(`${dist}/`)) {
-      res.writeHead(404).end();
-      return;
-    }
-    try {
-      const bytes = await readFile(target);
-      res.writeHead(200, {
-        "Content-Type": `${mime[extname(target)] || "application/octet-stream"};charset=utf-8`,
-        "Cache-Control": "no-store",
-      });
-      res.end(bytes);
-    } catch {
-      res.writeHead(404).end("Not found");
-    }
-  });
-  await new Promise((r) => server.listen(port, "127.0.0.1", r));
-  port = server.address().port;
-}
-async function stop() {
-  const current = server;
-  current.closeAllConnections();
-  await new Promise((r) => current.close(r));
-}
+const server = reviewServer(dist);
+const start = () => server.start();
+const stop = () => server.stop();
 const receipts = [];
 async function expectText(page, id, expected) {
   await page
@@ -76,7 +34,7 @@ async function download(page, id, name) {
   return { path, bytes: await readFile(path) };
 }
 await start();
-const base = `http://127.0.0.1:${port}/psephos/`;
+const base = server.base;
 try {
   for (const [name, engine] of [
     ["chromium", chromium],
@@ -262,11 +220,10 @@ try {
             new URL("sources/kenyon-p67.jpg", location.href),
             new Response("damaged source"),
           );
-          document.dispatchEvent(new Event("visibilitychange"));
         });
-        await expectText(page, "offline-status", "not fully available offline");
         await page.locator("#retry-scan").click();
         await expectText(page, "scan-status", "HTTP 503");
+        await expectText(page, "offline-status", "not fully available offline");
         assert.equal(await page.locator("#scan").isHidden(), true);
         await start();
         await page.evaluate(() => dispatchEvent(new Event("online")));

@@ -33,7 +33,8 @@
     "test": "node --import tsx --test tests/*.test.ts",
     "verify:sources": "node scripts/verify-sources.mjs",
     "test:browser": "node scripts/browser.mjs",
-    "check": "npm run lint && npm run typecheck && npm test && npm run verify:sources && npm run build"
+    "check": "npm run lint && npm run typecheck && npm test && npm run verify:sources && npm run build",
+    "test:audit": "node scripts/offline-audit.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

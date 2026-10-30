@@ -1,0 +1,17 @@
+{
+  "sourceCommit": "3c2c1e5",
+  "results": [
+    {
+      "browser": "chromium",
+      "sourceStatus": "The downloaded sources/kenyon-p67.jpg does not match this edition. Reload the page before trying again. Use Reload page to retry.",
+      "offlineStatus": "This edition is available offline, including every source page.",
+      "defect": "Source integrity failed while the footer still claims every source is available."
+    },
+    {
+      "browser": "firefox",
+      "sourceStatus": "The downloaded sources/kenyon-p67.jpg does not match this edition. Reload the page before trying again. Use Reload page to retry.",
+      "offlineStatus": "This edition is available offline, including every source page.",
+      "defect": "Source integrity failed while the footer still claims every source is available."
+    }
+  ]
+}

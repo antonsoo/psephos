@@ -22,6 +22,17 @@ async function editionCache(item: Asset): Promise<Response | undefined> {
 }
 
 export async function verifiedBytes(item: Asset, signal?: AbortSignal): Promise<ArrayBuffer> {
+  try {
+    return await readVerifiedBytes(item, signal);
+  } catch (error) {
+    // Explicit offline reads can bypass the worker, notably in Firefox. An
+    // integrity failure must also invalidate the page's earlier readiness claim.
+    if (!signal?.aborted) window.dispatchEvent(new Event("psephos:asset-failure"));
+    throw error;
+  }
+}
+
+async function readVerifiedBytes(item: Asset, signal?: AbortSignal): Promise<ArrayBuffer> {
   const controller = new AbortController();
   const cancel = () => controller.abort(signal?.reason);
   if (signal?.aborted) cancel();
