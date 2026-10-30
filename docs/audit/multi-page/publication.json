@@ -1,0 +1,218 @@
+{
+  "date": "2026-10-30T07:17:08.942Z",
+  "sourceCommit": "9d8a5d3e3cf70f79227859b5dc7a1bd7fc63f82a",
+  "sourceCleanAndSynchronizedAtCapture": true,
+  "deploymentCommit": "d0c771f7552b93f1be76026f963966257fee050d",
+  "deploymentParent": "e1568f63fe5c54cfb40adf14384681fd32c68861",
+  "forcePush": false,
+  "edition": "22212bb56b0620317536",
+  "publicFileCount": 21,
+  "publicBrowserJourneys": 4,
+  "driver": "https://github.com/antonsoo/officina/blob/9ba6675870823710ab584197423e3bfba5fdf0e5/scripts/readiness-public.mjs",
+  "pages": {
+    "httpStatus": 200,
+    "buildType": "legacy",
+    "source": {
+      "branch": "gh-pages",
+      "path": "/"
+    },
+    "status": "built"
+  },
+  "latestBuild": {
+    "httpStatus": 200,
+    "status": "built",
+    "commit": "d0c771f7552b93f1be76026f963966257fee050d"
+  },
+  "workflows": [
+    {
+      "id": 41018394188,
+      "name": "pages build and deployment",
+      "commit": "d0c771f7552b93f1be76026f963966257fee050d",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/antonsoo/psephos/actions/runs/41018394188",
+      "jobs": [
+        {
+          "name": "build",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Checkout",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Upload artifact",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Checkout",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "report-build-status",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Report Build Status",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Deploy to GitHub Pages",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41018046656,
+      "name": "Pages",
+      "commit": "9d8a5d3e3cf70f79227859b5dc7a1bd7fc63f82a",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/antonsoo/psephos/actions/runs/41018046656",
+      "jobs": [
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": 41018046599,
+      "name": "Check",
+      "commit": "9d8a5d3e3cf70f79227859b5dc7a1bd7fc63f82a",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/antonsoo/psephos/actions/runs/41018046599",
+      "jobs": [
+        {
+          "name": "check",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": 41014520727,
+      "name": "Pages",
+      "commit": "37bdc5af2fe2780f7911eaa06209d67676b7afc6",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/antonsoo/psephos/actions/runs/41014520727",
+      "jobs": [
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": []
+        }
+      ]
+    }
+  ],
+  "raw": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/9d8a5d3e3cf70f79227859b5dc7a1bd7fc63f82a/README.md",
+      "bytes": 14125,
+      "sha256": "0735cc552ab082d9c90dd12c80ce32ca7aaabe46e09adfcefeb94718d8583d05"
+    },
+    {
+      "path": "docs/audit.md",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/9d8a5d3e3cf70f79227859b5dc7a1bd7fc63f82a/docs/audit.md",
+      "bytes": 13711,
+      "sha256": "e2b47819dc65f05d7f3dbaa991aaf60a277e48f2930e8a267747573639453fea"
+    },
+    {
+      "path": "src/offline.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/9d8a5d3e3cf70f79227859b5dc7a1bd7fc63f82a/src/offline.ts",
+      "bytes": 3671,
+      "sha256": "48b91cd0d609fe9ceb793bc1fb9dc739ca72ad4404489a0226d8174796a96870"
+    },
+    {
+      "path": "scripts/offline.mjs",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/9d8a5d3e3cf70f79227859b5dc7a1bd7fc63f82a/scripts/offline.mjs",
+      "bytes": 5545,
+      "sha256": "7d2e4c21882e77f95c4e0d7e8b00d51d4d1b28b39b53e9ce23c7d8968b4bbe4a"
+    },
+    {
+      "path": "scripts/offline-audit.mjs",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/9d8a5d3e3cf70f79227859b5dc7a1bd7fc63f82a/scripts/offline-audit.mjs",
+      "bytes": 9884,
+      "sha256": "e339bdd2596f3be279ce774d9b19e77636f3d7d604e10035801e51e2f6d75dbd"
+    },
+    {
+      "path": "docs/audit/multi-page-before.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/9d8a5d3e3cf70f79227859b5dc7a1bd7fc63f82a/docs/audit/multi-page-before.json",
+      "bytes": 1055,
+      "sha256": "34a5c042be40fd305d1da37f00cf53233f76449d86258d24a07f5630e68fa8ae"
+    },
+    {
+      "path": "docs/audit/multi-page/clean-build.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/9d8a5d3e3cf70f79227859b5dc7a1bd7fc63f82a/docs/audit/multi-page/clean-build.json",
+      "bytes": 961,
+      "sha256": "90d497997eb90b7dce4cb4f44d141778b523fcddc914733297afb569cad7c4bd"
+    },
+    {
+      "path": "docs/audit/multi-page/local-browser.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/9d8a5d3e3cf70f79227859b5dc7a1bd7fc63f82a/docs/audit/multi-page/local-browser.json",
+      "bytes": 2991,
+      "sha256": "427a156a3b77896979d0c236aa2b024f3ff27c4d637e7472cdbf45c969af550b"
+    },
+    {
+      "path": "docs/audit/multi-page/local-readiness.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/9d8a5d3e3cf70f79227859b5dc7a1bd7fc63f82a/docs/audit/multi-page/local-readiness.json",
+      "bytes": 1420,
+      "sha256": "59fe401d71cbed68f06134dc43e66c4457f02230b7a0a577a3371d51cc8d1e94"
+    }
+  ]
+}

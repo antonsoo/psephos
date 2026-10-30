@@ -222,3 +222,37 @@ inspected. The [two-page audit](audit/multi-page/local-readiness.json) checks
 both footers on failure and recovery, rejects foreign notifications, checks
 that a repeated failure produces no additional invalidation, and exercises a
 waiting edition. The earlier receipts remain evidence of their own builds.
+
+
+## Published multi-page follow-up
+
+| Boundary                    | Recorded identity                               |
+| --------------------------- | ----------------------------------------------- |
+| Reviewed source             | `9d8a5d3e3cf70f79227859b5dc7a1bd7fc63f82a`      |
+| Published `gh-pages` commit | `d0c771f7552b93f1be76026f963966257fee050d`      |
+| Worker edition              | `22212bb56b0620317536`                          |
+| Canonical hosted build      | 21 files, every byte matched                    |
+| Public browser matrix       | 4 journeys, Chromium/Firefox at 1440/375 pixels |
+
+The [public-file receipt](audit/multi-page/public-files.json) independently compares
+all hosted files with the reviewed build. The [public-browser receipt](audit/multi-page/public-browser.json)
+records two open pages in every journey. It first checks emulated-offline source
+behavior, then closes real TLS tunnels and refuses new connections to the
+actual public origin. No response is substituted and no production request is
+redirected. A fresh worker-free browser fails; `navigator.onLine` remains true.
+
+The installed app reloads while that transport is unavailable, reopens its
+actual downloaded JSON, and produces illustrated HTML identical to its connected
+export. A native image request discovering corrupted retention withdraws both
+pages' readiness. Reconnecting and repairing the complete inventory restores
+both. The recovered native record is identical; displayed source bytes and
+embedded source/font bytes match their retained identities. The warning's
+[375px screenshot](audit/multi-page/offline-warning-375.png) was visually inspected,
+as were all public footer screenshots.
+
+The [source and publication receipt](audit/multi-page/publication.json) pins the driver,
+source documents and byte comparisons, and records the preserved deployment
+parent. GitHub's branch-based Pages build completed successfully. The source
+CI/Pages workflows returned failure with empty step lists; they are not passing
+source CI. Local build identity, successful Pages deployment and actual hosted
+browser behavior remain independent evidence.

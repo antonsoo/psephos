@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "node": "v26.7.0",
+  "requestTimeoutMs": 10000,
+  "retryWindowMs": 60000,
+  "pollIntervalMs": 5000,
+  "concurrency": 6,
+  "baseURL": "https://antonsoo.github.io/psephos/",
+  "state": "verified",
+  "attempts": 1,
+  "startedAtUtc": "2026-10-30T07:10:33.468Z",
+  "checkedAtUtc": "2026-10-30T07:10:35.098Z",
+  "buildManifestSha256": "8c0e19ad009cd7c42f8eba3cc595ff58ce64ba159c9f6fea03533e44309b33ea",
+  "expectedFileCount": 21,
+  "checkedFileCount": 21,
+  "verifiedFileCount": 21,
+  "rootBefore": {
+    "path": "index.html",
+    "bytes": 16345,
+    "sha256": "fa8dcce075e988a8f6bf08761fce3abfff2fbc63f8673fdd88d1ba2da0a0cddd",
+    "url": "https://antonsoo.github.io/psephos/",
+    "httpStatus": 200,
+    "observedBytes": 16345,
+    "observedSha256": "fa8dcce075e988a8f6bf08761fce3abfff2fbc63f8673fdd88d1ba2da0a0cddd",
+    "state": "verified"
+  },
+  "rootAfter": {
+    "path": "index.html",
+    "bytes": 16345,
+    "sha256": "fa8dcce075e988a8f6bf08761fce3abfff2fbc63f8673fdd88d1ba2da0a0cddd",
+    "url": "https://antonsoo.github.io/psephos/",
+    "httpStatus": 200,
+    "observedBytes": 16345,
+    "observedSha256": "fa8dcce075e988a8f6bf08761fce3abfff2fbc63f8673fdd88d1ba2da0a0cddd",
+    "state": "verified"
+  },
+  "files": [
+    {
+      "path": "LICENSE.txt",
+      "bytes": 1071,
+      "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81",
+      "url": "https://antonsoo.github.io/psephos/LICENSE.txt",
+      "httpStatus": 200,
+      "observedBytes": 1071,
+      "observedSha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81",
+      "state": "verified"
+    },
+    {
+      "path": "assets/index-Dk6HhNuE.css",
+      "bytes": 14635,
+      "sha256": "7c600bc0a1c767ba9cd8bd43f277740f7afc32bb1d5de29772fc5f3a22d85ea0",
+      "url": "https://antonsoo.github.io/psephos/assets/index-Dk6HhNuE.css",
+      "httpStatus": 200,
+      "observedBytes": 14635,
+      "observedSha256": "7c600bc0a1c767ba9cd8bd43f277740f7afc32bb1d5de29772fc5f3a22d85ea0",
+      "state": "verified"
+    },
+    {
+      "path": "assets/index-XNxRaga6.js",
+      "bytes": 58822,
+      "sha256": "21b53f38eeb75b20cb19866a9a9c148be8a5c419f4a77b369629c45dbae98858",
+      "url": "https://antonsoo.github.io/psephos/assets/index-XNxRaga6.js",
+      "httpStatus": 200,
+      "observedBytes": 58822,
+      "observedSha256": "21b53f38eeb75b20cb19866a9a9c148be8a5c419f4a77b369629c45dbae98858",
+      "state": "verified"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 291,
+      "sha256": "7bdcefd50abdaa41d4b05a497420be430c31b67df2cc01b23727ce1b2d40c74c",
+      "url": "https://antonsoo.github.io/psephos/favicon.svg",
+      "httpStatus": 200,
+      "observedBytes": 291,
+      "observedSha256": "7bdcefd50abdaa41d4b05a497420be430c31b67df2cc01b23727ce1b2d40c74c",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/literata-OFL.txt",
+      "bytes": 4389,
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e",
+      "url": "https://antonsoo.github.io/psephos/fonts/literata-OFL.txt",
+      "httpStatus": 200,
+      "observedBytes": 4389,
+      "observedSha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/literata.woff2",
+      "bytes": 396664,
+      "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db",
+      "url": "https://antonsoo.github.io/psephos/fonts/literata.woff2",
+      "httpStatus": 200,
+      "observedBytes": 396664,
+      "observedSha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/provenance.json",
+      "bytes": 637,
+      "sha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2",
+      "url": "https://antonsoo.github.io/psephos/fonts/provenance.json",
+      "httpStatus": 200,
+      "observedBytes": 637,
+      "observedSha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/sourcesans3-OFL.txt",
+      "bytes": 4486,
+      "sha256": "ed86f375d70bd39238d13b2ba5bd3bed20b3fe4847fa1356a63f380d2b26a8a5",
+      "url": "https://antonsoo.github.io/psephos/fonts/sourcesans3-OFL.txt",
+      "httpStatus": 200,
+      "observedBytes": 4486,
+      "observedSha256": "ed86f375d70bd39238d13b2ba5bd3bed20b3fe4847fa1356a63f380d2b26a8a5",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/sourcesans3.woff2",
+      "bytes": 170188,
+      "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8",
+      "url": "https://antonsoo.github.io/psephos/fonts/sourcesans3.woff2",
+      "httpStatus": 200,
+      "observedBytes": 170188,
+      "observedSha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8",
+      "state": "verified"
+    },
+    {
+      "path": "index.html",
+      "bytes": 16345,
+      "sha256": "fa8dcce075e988a8f6bf08761fce3abfff2fbc63f8673fdd88d1ba2da0a0cddd",
+      "url": "https://antonsoo.github.io/psephos/index.html",
+      "httpStatus": 200,
+      "observedBytes": 16345,
+      "observedSha256": "fa8dcce075e988a8f6bf08761fce3abfff2fbc63f8673fdd88d1ba2da0a0cddd",
+      "state": "verified"
+    },
+    {
+      "path": "sources/CC-BY-SA-4.0.txt",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+      "url": "https://antonsoo.github.io/psephos/sources/CC-BY-SA-4.0.txt",
+      "httpStatus": 200,
+      "observedBytes": 20138,
+      "observedSha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+      "state": "verified"
+    },
+    {
+      "path": "sources/NOTICE.txt",
+      "bytes": 3791,
+      "sha256": "907edba211d28b9a62599348b6545bda51f7d4f811fda1174be4261944914613",
+      "url": "https://antonsoo.github.io/psephos/sources/NOTICE.txt",
+      "httpStatus": 200,
+      "observedBytes": 3791,
+      "observedSha256": "907edba211d28b9a62599348b6545bda51f7d4f811fda1174be4261944914613",
+      "state": "verified"
+    },
+    {
+      "path": "sources/agora-ballots.jpg",
+      "bytes": 172863,
+      "sha256": "89d926d1e094338f1bdd20234973548fd2f995ef26463cb11550417cda148df3",
+      "url": "https://antonsoo.github.io/psephos/sources/agora-ballots.jpg",
+      "httpStatus": 200,
+      "observedBytes": 172863,
+      "observedSha256": "89d926d1e094338f1bdd20234973548fd2f995ef26463cb11550417cda148df3",
+      "state": "verified"
+    },
+    {
+      "path": "sources/kenyon-imprint.jpg",
+      "bytes": 204830,
+      "sha256": "96f51e16079965e31b99add41a6b71c3e28c32c279b5d34cced161b15ec65d2f",
+      "url": "https://antonsoo.github.io/psephos/sources/kenyon-imprint.jpg",
+      "httpStatus": 200,
+      "observedBytes": 204830,
+      "observedSha256": "96f51e16079965e31b99add41a6b71c3e28c32c279b5d34cced161b15ec65d2f",
+      "state": "verified"
+    },
+    {
+      "path": "sources/kenyon-p67.jpg",
+      "bytes": 823814,
+      "sha256": "a0041cfca79448bf40204d66308c73e5dbb5aa51a7ce186894b9f4114963bc71",
+      "url": "https://antonsoo.github.io/psephos/sources/kenyon-p67.jpg",
+      "httpStatus": 200,
+      "observedBytes": 823814,
+      "observedSha256": "a0041cfca79448bf40204d66308c73e5dbb5aa51a7ce186894b9f4114963bc71",
+      "state": "verified"
+    },
+    {
+      "path": "sources/kenyon-p68.jpg",
+      "bytes": 887885,
+      "sha256": "459982e373f32e0e9fe0c4068d352dc593a05aba533262b58dc3255c75eda300",
+      "url": "https://antonsoo.github.io/psephos/sources/kenyon-p68.jpg",
+      "httpStatus": 200,
+      "observedBytes": 887885,
+      "observedSha256": "459982e373f32e0e9fe0c4068d352dc593a05aba533262b58dc3255c75eda300",
+      "state": "verified"
+    },
+    {
+      "path": "sources/kenyon-title.jpg",
+      "bytes": 214963,
+      "sha256": "155e06a7ebf0670c3a7d8f8a998e33b9143bdc994c4aa693a8a11fbb6e1ecb86",
+      "url": "https://antonsoo.github.io/psephos/sources/kenyon-title.jpg",
+      "httpStatus": 200,
+      "observedBytes": 214963,
+      "observedSha256": "155e06a7ebf0670c3a7d8f8a998e33b9143bdc994c4aa693a8a11fbb6e1ecb86",
+      "state": "verified"
+    },
+    {
+      "path": "sources/manifest.json",
+      "bytes": 2751,
+      "sha256": "b0db5528eb81c924b26ee6f64fa481382eefe3ad6d32332fa6537ca7cb735325",
+      "url": "https://antonsoo.github.io/psephos/sources/manifest.json",
+      "httpStatus": 200,
+      "observedBytes": 2751,
+      "observedSha256": "b0db5528eb81c924b26ee6f64fa481382eefe3ad6d32332fa6537ca7cb735325",
+      "state": "verified"
+    },
+    {
+      "path": "sources/perseus-grc2.xml",
+      "bytes": 264047,
+      "sha256": "6e0c298a511e05d9e287860f1c98344f4c409ed5f6f18e8c9ef0cb6974ae8e1a",
+      "url": "https://antonsoo.github.io/psephos/sources/perseus-grc2.xml",
+      "httpStatus": 200,
+      "observedBytes": 264047,
+      "observedSha256": "6e0c298a511e05d9e287860f1c98344f4c409ed5f6f18e8c9ef0cb6974ae8e1a",
+      "state": "verified"
+    },
+    {
+      "path": "sources/provenance.json",
+      "bytes": 3765,
+      "sha256": "ca7ab5cbb5e0d3307c068b3ecdc4cbf5ecf9c4be162ff4d0bbdc5613646e8b79",
+      "url": "https://antonsoo.github.io/psephos/sources/provenance.json",
+      "httpStatus": 200,
+      "observedBytes": 3765,
+      "observedSha256": "ca7ab5cbb5e0d3307c068b3ecdc4cbf5ecf9c4be162ff4d0bbdc5613646e8b79",
+      "state": "verified"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 6705,
+      "sha256": "226c7e82d3e49a2c200457f35581a36fff27f962507a0d95a9ff095a8fed370c",
+      "url": "https://antonsoo.github.io/psephos/sw.js",
+      "httpStatus": 200,
+      "observedBytes": 6705,
+      "observedSha256": "226c7e82d3e49a2c200457f35581a36fff27f962507a0d95a9ff095a8fed370c",
+      "state": "verified"
+    }
+  ],
+  "scope": "Compares canonical responses with this captured build inventory during the recorded pass. Extra hosted files, browser behavior, public source, registry releases and deployment provenance are not established."
+}
