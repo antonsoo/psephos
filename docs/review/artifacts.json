@@ -1,0 +1,22 @@
+[
+  {
+    "path": "examples/last-vote-count.svg",
+    "bytes": 3886,
+    "sha256": "cd25922e61c6646866c35d83a0b6aedd55678a487899cad648292fb09c370695"
+  },
+  {
+    "path": "examples/last-vote-record.html.gz",
+    "bytes": 2576800,
+    "sha256": "bf1f6c7340473eedcb58e7d67c21b90df53081f40a9212a73ea2cca9ad090f88"
+  },
+  {
+    "path": "examples/last-vote-record.json",
+    "bytes": 998,
+    "sha256": "54feaf000f8bc8057d1e5abb61b29cdd24caa56a2391d5e1f2ee1f39af8f24f7"
+  },
+  {
+    "path": "examples/last-vote-record.pdf",
+    "bytes": 3233482,
+    "sha256": "05fb4c738358e3be973800e13d89572b5ece985900c527af5673831400f48c29"
+  }
+]

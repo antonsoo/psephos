@@ -1,0 +1,79 @@
+{
+  "base": "http://127.0.0.1:45291/psephos/",
+  "receipts": [
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "passed": true,
+      "a11yViolations": 0,
+      "realOutageReload": true,
+      "offlineArtifactSha256": "92e2117921c0a81016da37cef876a7617f4124c098d6c52fbc446711b489fff3",
+      "htmlSha256": "92e2117921c0a81016da37cef876a7617f4124c098d6c52fbc446711b489fff3",
+      "embeddedSourceImages": 3,
+      "embeddedFileIdentities": 13,
+      "damagedCacheRefusedAndRepaired": true,
+      "errors": [],
+      "external": []
+    },
+    {
+      "browser": "chromium",
+      "width": 375,
+      "passed": true,
+      "a11yViolations": 0,
+      "realOutageReload": true,
+      "offlineArtifactSha256": "92e2117921c0a81016da37cef876a7617f4124c098d6c52fbc446711b489fff3",
+      "htmlSha256": "92e2117921c0a81016da37cef876a7617f4124c098d6c52fbc446711b489fff3",
+      "embeddedSourceImages": 3,
+      "embeddedFileIdentities": 13,
+      "damagedCacheRefusedAndRepaired": true,
+      "errors": [],
+      "external": []
+    },
+    {
+      "browser": "chromium",
+      "sourceSubstitutionRefused": true,
+      "sourceRecovery": true,
+      "staleSourceIgnored": true,
+      "exportSnapshotPreserved": true,
+      "exportCancellationKeptWork": true,
+      "delayedImportKeptWork": true
+    },
+    {
+      "browser": "firefox",
+      "width": 1440,
+      "passed": true,
+      "a11yViolations": 0,
+      "realOutageReload": true,
+      "offlineArtifactSha256": "92e2117921c0a81016da37cef876a7617f4124c098d6c52fbc446711b489fff3",
+      "htmlSha256": "92e2117921c0a81016da37cef876a7617f4124c098d6c52fbc446711b489fff3",
+      "embeddedSourceImages": 3,
+      "embeddedFileIdentities": 13,
+      "damagedCacheRefusedAndRepaired": true,
+      "errors": [],
+      "external": []
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "passed": true,
+      "a11yViolations": 0,
+      "realOutageReload": true,
+      "offlineArtifactSha256": "92e2117921c0a81016da37cef876a7617f4124c098d6c52fbc446711b489fff3",
+      "htmlSha256": "92e2117921c0a81016da37cef876a7617f4124c098d6c52fbc446711b489fff3",
+      "embeddedSourceImages": 3,
+      "embeddedFileIdentities": 13,
+      "damagedCacheRefusedAndRepaired": true,
+      "errors": [],
+      "external": []
+    },
+    {
+      "browser": "firefox",
+      "sourceSubstitutionRefused": true,
+      "sourceRecovery": true,
+      "staleSourceIgnored": true,
+      "exportSnapshotPreserved": true,
+      "exportCancellationKeptWork": true,
+      "delayedImportKeptWork": true
+    }
+  ]
+}
