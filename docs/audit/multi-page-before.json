@@ -1,0 +1,21 @@
+{
+  "stage": "Single-page notification fix, before broadcasting inventory transitions",
+  "results": [
+    {
+      "browser": "chromium",
+      "repo": "psephos",
+      "base": "https://antonsoo.github.io/psephos/",
+      "sourceFailure": "The downloaded sources/kenyon-p67.jpg failed its source check. No substituted file will be used. Use Reload page to retry.",
+      "initiatingFooter": "This edition is not fully available offline. Connect and reload, or save a court record.",
+      "otherFooter": "This edition is available offline, including every source page."
+    },
+    {
+      "browser": "firefox",
+      "repo": "psephos",
+      "base": "https://antonsoo.github.io/psephos/",
+      "sourceFailure": "The downloaded sources/kenyon-p67.jpg failed its source check. No substituted file will be used. Use Reload page to retry.",
+      "initiatingFooter": "This edition is not fully available offline. Connect and reload, or save a court record.",
+      "otherFooter": "This edition is available offline, including every source page."
+    }
+  ]
+}

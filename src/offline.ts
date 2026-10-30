@@ -43,7 +43,11 @@ export function installOffline(status: HTMLElement): void {
   navigator.serviceWorker.addEventListener("message", (event: MessageEvent<unknown>) => {
     if (event.source !== navigator.serviceWorker.controller) return;
     const value = event.data as { type?: unknown; edition?: unknown } | null;
-    if (value?.type === "inventory-invalidated" && value.edition === expected) void inspect();
+    if (
+      (value?.type === "inventory-invalidated" || value?.type === "inventory-restored") &&
+      value.edition === expected
+    )
+      void inspect();
   });
   window.addEventListener("psephos:asset-failure", () => {
     void inspect();

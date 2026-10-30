@@ -48,6 +48,16 @@ try {
       const page = await context.newPage();
       await page.goto(server.base);
       await ready(page);
+      const observer = await context.newPage();
+      await observer.goto(server.base);
+      await ready(observer);
+      for (const reader of [page, observer])
+        await reader.evaluate(() => {
+          window.inventoryNotices = 0;
+          navigator.serviceWorker.addEventListener("message", (event) => {
+            if (event.data?.type === "inventory-invalidated") window.inventoryNotices++;
+          });
+        });
       await context.setOffline(true);
       await page.evaluate(async () => {
         const edition = document.querySelector('meta[name="psephos-edition"]').content;
@@ -63,6 +73,7 @@ try {
         .filter({ hasText: "does not match this edition" })
         .waitFor();
       await incomplete(page);
+      await incomplete(observer);
       assert.equal(await page.locator("#scan").isHidden(), true);
       // A healthy file in another cache cannot replace the current edition.
       assert.equal(
@@ -73,8 +84,12 @@ try {
       );
       await context.setOffline(false);
       await ready(page);
+      await ready(observer);
       await page.locator("#retry-scan").click();
       await page.locator("#scan-status").filter({ hasText: "checked against" }).waitFor();
+      const noticesBefore = await Promise.all(
+        [page, observer].map((reader) => reader.evaluate(() => window.inventoryNotices)),
+      );
       // No helper fetch and no synthetic inventory event: the worker must
       // notify clients when a plain image request discovers damaged storage.
       await server.stop();
@@ -90,6 +105,26 @@ try {
       );
       assert.equal(failedImage, 503);
       await incomplete(page);
+      await incomplete(observer);
+      const noticesAfter = await Promise.all(
+        [page, observer].map((reader) => reader.evaluate(() => window.inventoryNotices)),
+      );
+      assert.deepEqual(
+        noticesAfter,
+        noticesBefore.map((count) => count + 1),
+      );
+      assert.equal(
+        await page.evaluate(
+          async () => (await fetch(new URL("sources/agora-ballots.jpg", location.href))).status,
+        ),
+        503,
+      );
+      assert.deepEqual(
+        await Promise.all(
+          [page, observer].map((reader) => reader.evaluate(() => window.inventoryNotices)),
+        ),
+        noticesAfter,
+      );
       const unknown = await page.evaluate(async () => {
         try {
           return (await fetch(new URL("not-an-offline-page.html", location.href))).status;
@@ -106,6 +141,7 @@ try {
         200,
       );
       await ready(page);
+      await ready(observer);
       const documentEdition = await page
         .locator('meta[name="psephos-edition"]')
         .getAttribute("content");
@@ -185,6 +221,8 @@ try {
         initialEdition: documentEdition,
         explicitOfflineIntegrityFailureWithdrawsReadiness: true,
         nativeImageFailureWithdrawsReadiness: true,
+        otherOpenPageAutomaticallyWithdrawsReadiness: true,
+        repeatedFailureNotificationsCoalesced: true,
         otherEditionCacheNotUsed: true,
         uncachedNavigationNotInvented: true,
         connectedRecovery: true,
