@@ -1,0 +1,302 @@
+{
+  "sourceCommit": "2deaf7db790c343b8a6fbfedb6f88ee2755a04e1",
+  "repository": "https://github.com/antonsoo/psephos",
+  "date": "2026-10-30T06:29:27.627Z",
+  "pages": {
+    "buildType": "legacy",
+    "source": {
+      "branch": "gh-pages",
+      "path": "/"
+    },
+    "status": "built"
+  },
+  "legacyBuild": {
+    "status": "built",
+    "commit": "e1568f63fe5c54cfb40adf14384681fd32c68861",
+    "createdAt": "2026-10-30T06:27:54Z",
+    "updatedAt": "2026-10-30T06:28:19Z"
+  },
+  "workflows": [
+    {
+      "id": 41014230395,
+      "name": "pages build and deployment",
+      "commit": "e1568f63fe5c54cfb40adf14384681fd32c68861",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/antonsoo/psephos/actions/runs/41014230395",
+      "jobs": [
+        {
+          "name": "build",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-30T06:27:58Z",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Checkout",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Upload artifact",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Checkout",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "report-build-status",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-30T06:28:08Z",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Report Build Status",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-30T06:28:11Z",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Deploy to GitHub Pages",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41014187902,
+      "name": "Check",
+      "commit": "2deaf7db790c343b8a6fbfedb6f88ee2755a04e1",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/antonsoo/psephos/actions/runs/41014187902",
+      "jobs": [
+        {
+          "name": "check",
+          "status": "completed",
+          "conclusion": "failure",
+          "startedAt": "2026-10-30T06:27:28Z",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": 41014187838,
+      "name": "Pages",
+      "commit": "2deaf7db790c343b8a6fbfedb6f88ee2755a04e1",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/antonsoo/psephos/actions/runs/41014187838",
+      "jobs": [
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "failure",
+          "startedAt": "2026-10-30T06:27:28Z",
+          "steps": []
+        }
+      ]
+    }
+  ],
+  "raw": [
+    {
+      "path": "docs/audit.md",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/docs/audit.md",
+      "bytes": 10247,
+      "sha256": "81c37a0a0be188c8ab84dfd8a93cd02f50266fe88b422b4b05d3c57426a60443"
+    },
+    {
+      "path": "docs/assets/inference-1440.png",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/docs/assets/inference-1440.png",
+      "bytes": 155899,
+      "sha256": "5167e647c2b6e8669fa5857f6443bad503085cdcc0bbc1a869a526c9ce34f8c2"
+    },
+    {
+      "path": "docs/assets/inference-375.png",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/docs/assets/inference-375.png",
+      "bytes": 229411,
+      "sha256": "7103b6b2fa30ffd32c1d6cad3597f5e2ddf5354f0d89ff030fddfc23a4f9e169"
+    },
+    {
+      "path": "examples/last-vote-record.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/examples/last-vote-record.json",
+      "bytes": 1125,
+      "sha256": "039a4949ba2b49c0f43d57c5f6b0ee9047cd750dcceec09587e62da655c89149"
+    },
+    {
+      "path": "examples/last-vote-count.svg",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/examples/last-vote-count.svg",
+      "bytes": 3886,
+      "sha256": "cd25922e61c6646866c35d83a0b6aedd55678a487899cad648292fb09c370695"
+    },
+    {
+      "path": "examples/last-vote-record.html.gz",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/examples/last-vote-record.html.gz",
+      "bytes": 3412486,
+      "sha256": "e4451ebe2b681bde20d9d69152d0a2cf606568bc55d53fa7d92e3c2cc535011e"
+    },
+    {
+      "path": "examples/last-vote-record.pdf",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/examples/last-vote-record.pdf",
+      "bytes": 3717396,
+      "sha256": "ab4d57a495636be86cc2f94774a477cfa0bdd7ca47e5fc1419c609448d8e8729"
+    },
+    {
+      "path": "src/core/model.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/src/core/model.ts",
+      "bytes": 6522,
+      "sha256": "7ce16626bd7b79d298dfadef8f3f545e7677afb35a8f020c814daa7b9a4fcec0"
+    },
+    {
+      "path": "src/core/inference.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/src/core/inference.ts",
+      "bytes": 2198,
+      "sha256": "1aa0a17b63c67ffa0b7f9dbe0cfb0e10b30324a54dcf1de21fc05a19a2f2cecd"
+    },
+    {
+      "path": "src/readings.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/src/readings.ts",
+      "bytes": 12363,
+      "sha256": "ca6f1f8a3968ca1f2c292a7d3bd41ca75d028f14cf19fd45eab55816eddbe69b"
+    },
+    {
+      "path": "src/source-pages.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/src/source-pages.ts",
+      "bytes": 924,
+      "sha256": "6493a9f9c8d59f66a962c9574d36fcba754c60acf949eb136b7e8a038453cc56"
+    },
+    {
+      "path": "public/LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/public/LICENSE.txt",
+      "bytes": 1071,
+      "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81"
+    },
+    {
+      "path": "public/fonts/literata-OFL.txt",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/public/fonts/literata-OFL.txt",
+      "bytes": 4389,
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+    },
+    {
+      "path": "public/fonts/literata.woff2",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/public/fonts/literata.woff2",
+      "bytes": 396664,
+      "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db"
+    },
+    {
+      "path": "public/fonts/provenance.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/public/fonts/provenance.json",
+      "bytes": 637,
+      "sha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2"
+    },
+    {
+      "path": "public/fonts/sourcesans3-OFL.txt",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/public/fonts/sourcesans3-OFL.txt",
+      "bytes": 4486,
+      "sha256": "ed86f375d70bd39238d13b2ba5bd3bed20b3fe4847fa1356a63f380d2b26a8a5"
+    },
+    {
+      "path": "public/fonts/sourcesans3.woff2",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/public/fonts/sourcesans3.woff2",
+      "bytes": 170188,
+      "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8"
+    },
+    {
+      "path": "public/sources/CC-BY-SA-4.0.txt",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/public/sources/CC-BY-SA-4.0.txt",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+    },
+    {
+      "path": "public/sources/NOTICE.txt",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/public/sources/NOTICE.txt",
+      "bytes": 3791,
+      "sha256": "907edba211d28b9a62599348b6545bda51f7d4f811fda1174be4261944914613"
+    },
+    {
+      "path": "public/sources/agora-ballots.jpg",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/public/sources/agora-ballots.jpg",
+      "bytes": 172863,
+      "sha256": "89d926d1e094338f1bdd20234973548fd2f995ef26463cb11550417cda148df3"
+    },
+    {
+      "path": "public/sources/kenyon-imprint.jpg",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/public/sources/kenyon-imprint.jpg",
+      "bytes": 204830,
+      "sha256": "96f51e16079965e31b99add41a6b71c3e28c32c279b5d34cced161b15ec65d2f"
+    },
+    {
+      "path": "public/sources/kenyon-p67.jpg",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/public/sources/kenyon-p67.jpg",
+      "bytes": 823814,
+      "sha256": "a0041cfca79448bf40204d66308c73e5dbb5aa51a7ce186894b9f4114963bc71"
+    },
+    {
+      "path": "public/sources/kenyon-p68.jpg",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/public/sources/kenyon-p68.jpg",
+      "bytes": 887885,
+      "sha256": "459982e373f32e0e9fe0c4068d352dc593a05aba533262b58dc3255c75eda300"
+    },
+    {
+      "path": "public/sources/kenyon-title.jpg",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/public/sources/kenyon-title.jpg",
+      "bytes": 214963,
+      "sha256": "155e06a7ebf0670c3a7d8f8a998e33b9143bdc994c4aa693a8a11fbb6e1ecb86"
+    },
+    {
+      "path": "public/sources/perseus-grc2.xml",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/public/sources/perseus-grc2.xml",
+      "bytes": 264047,
+      "sha256": "6e0c298a511e05d9e287860f1c98344f4c409ed5f6f18e8c9ef0cb6974ae8e1a"
+    },
+    {
+      "path": "public/sources/provenance.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/psephos/2deaf7db790c343b8a6fbfedb6f88ee2755a04e1/public/sources/provenance.json",
+      "bytes": 3765,
+      "sha256": "ca7ab5cbb5e0d3307c068b3ecdc4cbf5ecf9c4be162ff4d0bbdc5613646e8b79"
+    }
+  ]
+}

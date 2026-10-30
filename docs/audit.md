@@ -164,3 +164,34 @@ file. The [development receipt](audit/development.json) separately operates the
 casting, inference and imprint with the documented development command and
 no worker installed. Publication receipts will identify the reviewed source
 and deployed edition.
+
+
+## Public edition
+
+[Open Psephos](https://antonsoo.github.io/psephos/). The reviewed source is
+`2deaf7db790c343b8a6fbfedb6f88ee2755a04e1`; the deployed `gh-pages` commit is
+`e1568f63fe5c54cfb40adf14384681fd32c68861`, edition
+`80a1776f6e15df80ae5d`. Later documentation-only commits do not change that build.
+
+The [public-browser receipt](audit/public-browser.json) compares **every one of
+21 hosted build files** byte for byte with the reviewed `dist/`, without request
+redirection. It rechecks the canonical entry after each journey and at the end.
+Chromium and Firefox, each at 1440 and 375 pixels, cast and count, operate the
+252-to-one deduction, reject altered evidence, read and cite Greek, verify the
+bytes actually displayed as the text page and imprint, and save native files.
+The real downloaded standalone HTML opens at both widths without HTTP requests
+or horizontal overflow. Disconnected reload, an identical illustrated export,
+unanimity from an empty panel and authentic version 1 migration also pass on
+the public edition. All eight public screenshots were visually inspected.
+
+The [public-source receipt](audit/public-source.json) separately fetches **26
+files at the immutable source commit**, including the review, screenshots,
+all four native examples, model/reader/source mapping and all 15 retained
+source/font/license assets. Each matches the actual Git object byte for byte.
+A correct caption or HTTP 200 alone is not the basis for this result.
+
+GitHub's branch-based **pages build and deployment** completed successfully.
+The source **Check** and **Pages** workflows returned failure with empty step
+lists. Those runs are not passing source CI, and are not used as evidence for
+the local application build or the public learner journey. Their IDs, results
+and available job steps are retained in the source receipt.

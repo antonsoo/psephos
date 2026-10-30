@@ -3,6 +3,7 @@
 **Cast an unseen Athenian jury vote. Make the count visible.**
 
 [![MIT license](https://img.shields.io/badge/code-MIT-26766c)](LICENSE)
+[![Live workbench](https://img.shields.io/badge/Live-workbench-153d39)](https://antonsoo.github.io/psephos/)
 
 ![The ballot pair beside an isolated view of its concealed axle ends](docs/assets/workbench-1440.png)
 
@@ -15,8 +16,8 @@ Replace a ballot and the total can stay right while the result changes.
 
 Psephos is an English-speaking learner's workbench for the procedure described
 in _Constitution of the Athenians_ 68.2–69.1. It joins a physical choice, a
-counting experiment, a deduction about hidden choices, and a close reading of the Greek. It does not invent a
-historical trial to win.
+counting experiment, a deduction about hidden choices, and a close reading of the Greek.
+It does not invent a historical trial to win.
 
 ## Try it
 
@@ -44,14 +45,13 @@ clean-build identity and hosted-browser evidence are recorded separately in the
 
 ## Investigations
 
-| Investigation              | Try this                                                        | What changes                                                                          |
-| -------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| The concealed choice       | Receive a pair; pin the observation; change solid to pierced    | The private choice changes, but the covered observer drawing stays identical          |
-| The last vote              | Keep solid selected; cast; count bronze                         | Five pierced and five solid: the defendant wins under 69.1                            |
-| The wrong urn              | Choose that rehearsal; cast solid; compare bronze with wood     | Bronze has 3 pierced / 7 solid; wood has the unused opposites, 7 / 3                  |
-| A total that still matches | Open the first rehearsal's bronze count; replace a solid ballot | Six pierced / four solid still total ten, but the altered count favors the prosecutor |
-
-| What the count reveals | After the five–five count, inspect arrangements; mark Jurors 1–5 known | 252 compatible assignments shrink to one; the target must be solid |
+| Investigation              | Try this                                                               | What changes                                                                          |
+| -------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| The concealed choice       | Receive a pair; pin the observation; change solid to pierced           | The private choice changes, but the covered observer drawing stays identical          |
+| The last vote              | Keep solid selected; cast; count bronze                                | Five pierced and five solid: the defendant wins under 69.1                            |
+| The wrong urn              | Choose that rehearsal; cast solid; compare bronze with wood            | Bronze has 3 pierced / 7 solid; wood has the unused opposites, 7 / 3                  |
+| A total that still matches | Open the first rehearsal's bronze count; replace a solid ballot        | Six pierced / four solid still total ten, but the altered count favors the prosecutor |
+| What the count reveals     | After the five–five count, inspect arrangements; mark Jurors 1–5 known | 252 compatible assignments shrink to one; the target must be solid                    |
 
 Ten is a **modern training panel size**, chosen to make equality and counting
 legible. It is not an ancient jury size. The earlier votes are invented.
