@@ -118,7 +118,7 @@ test("imports reject malformed actions, invented outcomes, oversized notes and u
     null,
     [],
     {},
-    { ...fresh(), version: 2 },
+    { ...fresh(), version: 3 },
     { ...fresh(), winner: "defendant" },
     { ...fresh(), actions: [{ type: "cast", winner: "prosecutor" }] },
     { ...fresh(), actions: [{ type: "choose", ballot: "abstain" }] },

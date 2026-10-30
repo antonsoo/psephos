@@ -1060,3 +1060,145 @@ footer strong {
     object-fit: contain;
   }
 }
+
+.inference {
+  margin-top: 75px;
+}
+.inference > p {
+  max-width: 90ch;
+}
+.inference-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.6fr);
+  gap: 38px;
+  margin: 28px 0;
+}
+.knowledge-controls {
+  background: #dae9e0;
+  border-radius: 18px;
+  padding: 26px;
+}
+.knowledge-controls > label {
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+.knowledge-controls > select {
+  width: 100%;
+}
+.knowledge-controls fieldset {
+  margin-top: 24px;
+}
+.knowledge-controls legend {
+  font-size: 18px;
+}
+.known-jurors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 12px;
+}
+.known-jurors label {
+  font-size: 17px;
+  min-height: 54px;
+  padding: 7px 0;
+}
+.known-jurors small {
+  display: block;
+  font-size: 14px;
+  color: #42685f;
+}
+.knowledge-controls .button-row {
+  margin: 24px 0 16px;
+}
+.knowledge-controls .button-row button {
+  font-size: 15px;
+  flex: 1;
+}
+.knowledge-controls > p:last-child {
+  font-size: 15px;
+  margin: 18px 0 0;
+}
+.knowledge-controls > .small {
+  font-size: 14px;
+}
+.inference-results {
+  padding: 14px 0;
+}
+.inference-results > h3 {
+  font-family: Literata, Georgia, serif;
+  font-size: 28px;
+  margin-top: 25px;
+}
+.inference-results table {
+  margin: 24px 0;
+}
+.assignment-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.assignment {
+  margin: 14px 0;
+}
+.assignment svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.assignment figcaption {
+  font-size: 16px;
+  font-weight: 600;
+  color: #153d39;
+  margin-bottom: 10px;
+}
+.assignment .small {
+  font-size: 13px;
+  margin-top: 8px;
+}
+.inference-proof {
+  font-size: 17px;
+}
+.inference-proof summary {
+  font-size: 17px;
+}
+.inference > .small {
+  max-width: 110ch;
+}
+@media (max-width: 1000px) {
+  .inference-layout {
+    grid-template-columns: 1fr 1.3fr;
+    gap: 25px;
+  }
+  .knowledge-controls {
+    padding: 22px;
+  }
+  .assignment-pair {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 720px) {
+  .inference {
+    margin-top: 60px;
+  }
+  .inference-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .knowledge-controls {
+    padding: 24px 20px;
+  }
+  .known-jurors {
+    gap: 5px 25px;
+  }
+  .inference-results {
+    padding: 5px 0;
+  }
+  .inference-results > h3 {
+    font-size: 26px;
+  }
+  .assignment-pair {
+    grid-template-columns: 1fr;
+  }
+  .inference-proof {
+    font-size: 16px;
+  }
+}

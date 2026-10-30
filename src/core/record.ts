@@ -1,22 +1,25 @@
-import { type Action, type Ballot, type Preset, replay } from "./model";
+import { initialKnowledge, type Knowledge } from "./inference";
+import { type Action, type Ballot, PANEL, type Preset, replay } from "./model";
 
 export const CITATIONS = ["pair", "urns", "grip", "count", "tie"] as const;
 export interface CourtRecord {
   format: "psephos-court-record";
-  version: 1;
+  version: 2;
   preset: Preset;
   actions: Action[];
   observation: { choice: Ballot; covered: boolean } | null;
+  knowledge: Knowledge;
   note: string;
   citations: string[];
 }
 export function fresh(preset: Preset = "last-vote"): CourtRecord {
   return {
     format: "psephos-court-record",
-    version: 1,
+    version: 2,
     preset,
     actions: [],
     observation: null,
+    knowledge: initialKnowledge(),
     note: "",
     citations: [],
   };
@@ -46,7 +49,8 @@ function action(value: unknown): Action {
     keys(v, ["type", "covered"]);
     if (typeof v.covered !== "boolean") throw new Error("A grip must be covered or exposed.");
   } else {
-    const schema = typeof v.type === "string" ? enums[v.type] : undefined;
+    const schema =
+      typeof v.type === "string" && Object.hasOwn(enums, v.type) ? enums[v.type] : undefined;
     if (!schema) throw new Error("Unrecognized rehearsal action.");
     keys(v, ["type", schema[0]]);
     if (!schema[1].includes(v[schema[0]] as string)) throw new Error("Invalid rehearsal choice.");
@@ -63,9 +67,18 @@ export function parseRecord(text: string): CourtRecord {
     throw new Error("This is not a readable JSON court record.");
   }
   const v = object(value);
-  keys(v, ["format", "version", "preset", "actions", "observation", "note", "citations"]);
-  if (v.format !== "psephos-court-record" || v.version !== 1)
-    throw new Error("Choose a Psephos version 1 court record.");
+  if (v.format !== "psephos-court-record" || ![1, 2].includes(v.version as number))
+    throw new Error("Choose a Psephos version 1 or 2 court record.");
+  keys(v, [
+    "format",
+    "version",
+    "preset",
+    "actions",
+    "observation",
+    "note",
+    "citations",
+    ...(v.version === 2 ? ["knowledge"] : []),
+  ]);
   if (!["last-vote", "wooden-urn", "empty"].includes(v.preset as string))
     throw new Error("Unrecognized starting rehearsal.");
   if (!Array.isArray(v.actions) || v.actions.length > 200)
@@ -87,12 +100,34 @@ export function parseRecord(text: string): CourtRecord {
       throw new Error("The pinned observation is invalid.");
     observation = { choice: p.choice as Ballot, covered: p.covered };
   }
+  let knowledge = initialKnowledge();
+  if (v.version === 2) {
+    const k = object(v.knowledge);
+    keys(k, ["target", "known", "inspected"]);
+    if (
+      !Number.isInteger(k.target) ||
+      (k.target as number) < 0 ||
+      (k.target as number) >= PANEL ||
+      !Array.isArray(k.known) ||
+      k.known.length >= PANEL ||
+      new Set(k.known).size !== k.known.length ||
+      k.known.some((i) => !Number.isInteger(i) || i < 0 || i >= PANEL || i === k.target) ||
+      typeof k.inspected !== "boolean"
+    )
+      throw new Error("Choose one target juror and distinct other jurors as assumed knowledge.");
+    knowledge = {
+      target: k.target as number,
+      known: [...k.known].sort((a, b) => a - b),
+      inspected: k.inspected,
+    };
+  }
   const record: CourtRecord = {
     format: "psephos-court-record",
-    version: 1,
+    version: 2,
     preset: v.preset as Preset,
     actions: v.actions.map(action),
     observation,
+    knowledge,
     note: v.note,
     citations: v.citations as string[],
   };

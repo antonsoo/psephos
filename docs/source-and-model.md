@@ -24,13 +24,15 @@ earlier scan is excluded from the PDF. Their zero-based indexes cannot be
 substituted for one another. The image headings and paragraph boundaries were
 visually inspected.
 
-| Retained image   | Printed heading | Original JP2 leaf | Derived PDF page | Reading                   |
-| ---------------- | --------------- | ----------------- | ---------------- | ------------------------- |
-| `kenyon-p67.jpg` | LXVII           | 81                | 81               | 68.2–3; beginning of 68.4 |
-| `kenyon-p68.jpg` | LXVIII          | 82                | 82               | 68.4 continued; 69.1–2    |
+| Retained image       | Printed heading | Original JP2 leaf | Derived PDF page | Reading                                     |
+| -------------------- | --------------- | ----------------- | ---------------- | ------------------------------------------- |
+| `kenyon-p67.jpg`     | LXVII           | 81                | 81               | 68.2–3; beginning of 68.4                   |
+| `kenyon-p68.jpg`     | LXVIII          | 82                | 82               | 68.4 continued; 69.1–2                      |
+| `kenyon-title.jpg`   | Title           | 7                 | —                | Editor and Clarendon imprint                |
+| `kenyon-imprint.jpg` | Imprint         | 8                 | —                | First published 1920; reprints through 1958 |
 
 The complete archive page is rescaled proportionally to fit 1800×3000 pixels,
-JPEG quality 90. No project crop, redrawing or recoloring is applied.
+JPEG quality 90. Bibliographic pages fit 1200×2100 at quality 88. No project crop, redrawing or recoloring is applied.
 The upstream image hashes, URLs and conversion are in
 `public/sources/provenance.json`; final hashes are in `manifest.json`.
 
@@ -40,7 +42,7 @@ were regenerated after the source correction.
 
 ## Transcription policy
 
-The Greek follows Kenyon's **1920 printed witness**, not an unqualified
+The Greek follows this **scanned Kenyon edition, first published in 1920**, not an unqualified
 reconstruction of a papyrus. The ancient work survives with damage and
 editorial intervention. Line-break hyphenation is joined; apostrophes,
 punctuation and capitalization at excerpt openings are normalized. Words,
@@ -88,6 +90,31 @@ The app keeps both accepted and refused attempts. Counted positions, results
 and text are recomputed from the selected starting facts and action sequence.
 Imported computed outcomes are rejected. The pinned observation and written
 explanation are retained separately from procedural undo.
+
+## Deducing a hidden choice
+
+This is a modern mathematical extension of the paired model, not another
+claim quoted from the ancient text. It assumes a faithful complete bronze
+count, exactly one vote per juror, and the truth of every explicitly marked
+known choice. Ten labels distinguish teaching jurors; no corresponding marks
+are asserted for the ancient objects.
+
+For a total of `p` pierced ballots, `k` known choices, of which `a` are pierced,
+there are `C(10-k, p-a)` compatible assignments. With the target not among the
+known choices, the target-pierced and target-solid possibilities are respectively
+`C(9-k, p-a-1)` and `C(9-k, p-a)`, taking impossible binomial arguments as zero.
+The app independently enumerates all 1,024 assignments and displays a witness
+for each still-possible target choice. Counts are not likelihoods.
+
+Five/five with no other facts has 252 assignments, split 126/126 for the target.
+Knowing four pierced choices leaves six assignments (one target-pierced,
+five target-solid). Knowing all five pierced choices leaves one assignment;
+all other jurors must have chosen solid. Unanimity requires no additional
+individual knowledge. The interface disables this inference for an altered
+count or the unused urn, because those violate its model premise.
+
+Observer assumptions persist in version 2 records, explicit links and portable
+HTML. Version 1 is migrated without inventing any assumed known votes.
 
 ## Archaeological comparison and omissions
 

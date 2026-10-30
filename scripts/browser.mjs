@@ -101,6 +101,23 @@ try {
           .locator("#workbench")
           .screenshot({ path: resolve(out, `${name}-${width}-altered.png`) });
         await page.locator("#audit-none").click();
+        await page.locator("#inspect-inference").click();
+        await expectText(page, "inference-results", "252 arrangements fit");
+        await page
+          .locator("#inference")
+          .screenshot({ path: resolve(out, `${name}-${width}-inference-open.png`) });
+        await page.locator("#know-nine").click();
+        await expectText(page, "inference-results", "choice is forced: solid");
+        for (const id of [5, 6, 7, 8]) await page.locator(`#known-${id}`).uncheck();
+        await expectText(page, "inference-results", "1 arrangement fits");
+        await page.locator("#known-4").uncheck();
+        await expectText(page, "inference-results", "6 arrangements fit");
+        await page.locator("#known-4").check();
+        await expectText(page, "inference-results", "choice is forced: solid");
+        await page
+          .locator("#inference")
+          .screenshot({ path: resolve(out, `${name}-${width}-inference-forced.png`) });
+
         await page.locator("#reading").selectOption("tie");
         await expectText(page, "scan-status", "Page LXVIII checked");
         await page.locator("#greek button").filter({ hasText: "ἂν δὲ ἴσαι" }).click();
@@ -119,9 +136,14 @@ try {
           .fill(
             "Five and five acquit under ἂν δὲ ἴσαι. Replacing a solid ballot leaves ten in total but changes the result. <This is my explanation.>",
           );
+        await page.locator("#scan-page").selectOption("imprint");
+        await expectText(page, "scan-status", "Page Imprint checked");
+        assert.match(await page.locator("#scan").getAttribute("alt"), /1958/);
         const json = await download(page, "save-json", `${name}-${width}-court.json`);
         const saved = JSON.parse(json.bytes);
         assert.deepEqual(saved.citations, ["tie"]);
+        assert.equal(saved.version, 2);
+        assert.deepEqual(saved.knowledge, { target: 9, known: [0, 1, 2, 3, 4], inspected: true });
         assert.ok(saved.observation);
         assert.ok(saved.actions.some((a) => a.pair === "two-pierced"));
         const svg = await download(page, "save-svg", `${name}-${width}-count.svg`);
@@ -130,10 +152,12 @@ try {
         const content = html.bytes.toString();
         assert.doesNotMatch(content, /<script\b/i);
         assert.match(content, /&lt;This is my explanation\.&gt;/);
+        assert.match(content, /Juror 10’s choice is forced: solid/);
+        assert.match(content, /REPRINTED|lists reprints/);
         const embeddedImages = [
           ...content.matchAll(/<img[^>]+src="data:image\/jpeg;base64,([^"]+)"/g),
         ].map((m) => Buffer.from(m[1], "base64"));
-        assert.equal(embeddedImages.length, 3);
+        assert.equal(embeddedImages.length, 5);
         for (const item of assets.filter((a) => a.mime === "image/jpeg"))
           assert.ok(
             embeddedImages.some((b) => hash(b) === item.sha256),
@@ -199,6 +223,7 @@ try {
         await linked.goto(link);
         assert.equal(await linked.locator("#note").inputValue(), saved.note);
         await expectText(linked, "verdict", "Equal votes");
+        await expectText(linked, "inference-results", "choice is forced: solid");
         await linked.close();
         const audit = await new AxeBuilder({ page }).analyze();
         assert.deepEqual(
@@ -249,6 +274,8 @@ try {
           passed: true,
           a11yViolations: audit.violations.length,
           realOutageReload: true,
+          splitCountAndFiveKnownChoicesOperated: true,
+          observerKnowledgeRetainedInArtifactsAndLinks: true,
           offlineArtifactSha256: hash(offline.bytes),
           htmlSha256: hash(html.bytes),
           embeddedSourceImages: embeddedImages.length,
@@ -299,6 +326,11 @@ try {
       release();
       assert.match(await page.locator("#scan").getAttribute("alt"), /LXVIII/);
       await page.unroute("**/sources/kenyon-p67.jpg");
+      await page.locator("#issue").click();
+      await page.locator("#cast").click();
+      await page.locator("#count-bronze").click();
+      await page.locator("#inspect-inference").click();
+      await page.locator("#know-nine").click();
       // Export captures inputs before its first asynchronous source request.
       let releaseExport;
       const exportGate = new Promise((r) => {
@@ -318,6 +350,7 @@ try {
       await page.locator("#save-html").click();
       await exportEntered;
       await page.locator("#note").fill("Changed during source loading");
+      await page.locator("#know-none").click();
       releaseExport();
       const d = await pending;
       const path = resolve(out, `${name}-snapshot.html`);
@@ -325,6 +358,12 @@ try {
       const html = await readFile(path, "utf8");
       assert.match(html, /Captured before source loading/);
       assert.doesNotMatch(html, /Changed during source loading/);
+      assert.match(html, /Juror 10’s choice is forced: solid/);
+      const nativeSnapshot = JSON.parse(
+        decodeURIComponent(html.match(/data:application\/json;charset=utf-8,([^"]+)/)[1]),
+      );
+      assert.equal(nativeSnapshot.knowledge.known.length, 9);
+      await expectText(page, "inference-results", "252 arrangements fit");
       await page.unroute("**/sources/agora-ballots.jpg");
       let releaseCancel;
       const cancelGate = new Promise((r) => {

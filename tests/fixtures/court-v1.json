@@ -1,0 +1,56 @@
+{
+  "format": "psephos-court-record",
+  "version": 1,
+  "preset": "last-vote",
+  "actions": [
+    {
+      "type": "issue",
+      "pair": "two-pierced"
+    },
+    {
+      "type": "issue",
+      "pair": "mixed"
+    },
+    {
+      "type": "choose",
+      "ballot": "pierced"
+    },
+    {
+      "type": "cover",
+      "covered": false
+    },
+    {
+      "type": "cover",
+      "covered": true
+    },
+    {
+      "type": "choose",
+      "ballot": "solid"
+    },
+    {
+      "type": "cast"
+    },
+    {
+      "type": "count",
+      "urn": "bronze"
+    },
+    {
+      "type": "intervene",
+      "kind": "extra"
+    },
+    {
+      "type": "intervene",
+      "kind": "replace"
+    },
+    {
+      "type": "intervene",
+      "kind": "none"
+    }
+  ],
+  "observation": {
+    "choice": "solid",
+    "covered": true
+  },
+  "note": "Five and five acquit under ἂν δὲ ἴσαι. Replacing a solid ballot leaves ten in total but changes the result. <This is my explanation.>",
+  "citations": ["tie"]
+}

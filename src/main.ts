@@ -13,8 +13,10 @@ import {
 import { fresh, fromLink, parseRecord, recordLink, serialize } from "./core/record";
 import { auditTable, boardSvg, escapeHtml, observerSvg, pairSvg, urnSvg, verdict } from "./drawing";
 import { diagram, illustrated, saveFile } from "./export";
+import { inferenceAvailable, inferenceReport } from "./inference-view";
 import { installOffline } from "./offline";
 import { reading, readings } from "./readings";
+import { sourcePage } from "./source-pages";
 
 function el<T extends HTMLElement = HTMLElement>(id: string): T {
   const found = document.getElementById(id);
@@ -34,7 +36,8 @@ let scanUrl: string | null = null;
 let exportController: AbortController | null = null;
 let initialMessage = "";
 try {
-  const stored = localStorage.getItem("psephos-record-v1");
+  const stored =
+    localStorage.getItem("psephos-record-v2") ?? localStorage.getItem("psephos-record-v1");
   if (stored) {
     record = parseRecord(stored);
     initialMessage = "Your saved rehearsal was reopened from this browser.";
@@ -55,7 +58,7 @@ try {
 function keep(): void {
   revision++;
   try {
-    localStorage.setItem("psephos-record-v1", serialize(record));
+    localStorage.setItem("psephos-record-v2", serialize(record));
     el("autosave").textContent = "Kept in this browser. Save a file for a separate copy.";
   } catch {
     el("autosave").textContent =
@@ -90,6 +93,29 @@ function renderCitations(): void {
   el("cite").textContent = record.citations.includes(readingId)
     ? "Passage added to record"
     : "Add passage to my record";
+}
+function renderInference(): void {
+  const { court } = replay(record.preset, record.actions);
+  const available = inferenceAvailable(court);
+  el<HTMLSelectElement>("target-juror").value = String(record.knowledge.target);
+  el<HTMLSelectElement>("target-juror").disabled = !available;
+  for (let i = 0; i < PANEL; i++) {
+    const field = el<HTMLInputElement>(`known-${i}`);
+    field.checked = record.knowledge.known.includes(i);
+    field.disabled = !available || i === record.knowledge.target;
+    el(`known-value-${i}`).textContent =
+      i === record.knowledge.target
+        ? "target"
+        : field.checked
+          ? (court.votes[i] ?? "not yet cast")
+          : "unknown";
+  }
+  for (const id of ["know-none", "know-nine", "inspect-inference"])
+    el<HTMLButtonElement>(id).disabled = !available;
+  el("inspect-inference").textContent = record.knowledge.inspected
+    ? "Recheck compatible arrangements"
+    : "Inspect compatible arrangements";
+  el("inference-results").innerHTML = inferenceReport(court, record.knowledge);
 }
 function render(): void {
   const { court, steps } = replay(record.preset, record.actions);
@@ -170,24 +196,22 @@ function render(): void {
   el<HTMLButtonElement>("undo").disabled = record.actions.length === 0;
   el<HTMLButtonElement>("redo").disabled = redo.length === 0;
   renderCitations();
+  renderInference();
 }
 async function loadScan(): Promise<void> {
   const id = ++loadId;
   scanController?.abort();
   const controller = new AbortController();
   scanController = controller;
-  const page = el<HTMLSelectElement>("scan-page").value === "81" ? "81" : "82";
-  const name = page === "81" ? "LXVII" : "LXVIII";
+  const page = sourcePage(el<HTMLSelectElement>("scan-page").value);
+  const name = page.label;
   el<HTMLImageElement>("scan").hidden = true;
   el("scan-status").textContent = `Loading complete page ${name}…`;
   el<HTMLAnchorElement>("archive-link").href =
-    `https://archive.org/details/aristotelisathen00aris/page/n${page}/mode/1up`;
+    `https://archive.org/details/aristotelisathen00aris/page/n${page.leaf}/mode/1up`;
   let url: string | null = null;
   try {
-    const bytes = await verifiedBytes(
-      asset(`sources/kenyon-p${page === "81" ? "67" : "68"}.jpg`),
-      controller.signal,
-    );
+    const bytes = await verifiedBytes(asset(page.image), controller.signal);
     url = URL.createObjectURL(new Blob([bytes], { type: "image/jpeg" }));
     const prepared = new Image();
     prepared.src = url;
@@ -200,7 +224,7 @@ async function loadScan(): Promise<void> {
     scanUrl = url;
     const img = el<HTMLImageElement>("scan");
     img.src = url;
-    img.alt = `Complete printed page ${name}, Kenyon 1920; ${page === "81" ? "68.2–3" : "68.4–69"}, with critical apparatus.`;
+    img.alt = `Complete ${name}, Kenyon’s edition first published 1920; ${page.description}.`;
     img.hidden = false;
     el("scan-status").textContent =
       `Page ${name} checked against its retained file. Enlarge and use arrow keys to pan.`;
@@ -242,12 +266,53 @@ function showReading(id: string): void {
   el("english").textContent = r.english;
   el("editorial").textContent = r.note;
   el("phrase-note").textContent = "Select an underlined phrase to read its role in the procedure.";
-  el<HTMLSelectElement>("scan-page").value = r.page === "LXVII" ? "81" : "82";
+  el<HTMLSelectElement>("scan-page").value = r.page === "LXVII" ? "67" : "68";
   renderCitations();
   void loadScan();
 }
 
 el("pair-drawing").innerHTML = pairSvg();
+el("target-juror").innerHTML = Array.from(
+  { length: PANEL },
+  (_, i) => `<option value="${i}">Juror ${i + 1}</option>`,
+).join("");
+el("known-jurors").innerHTML = Array.from(
+  { length: PANEL },
+  (_, i) =>
+    `<label><input type="checkbox" id="known-${i}" value="${i}" /><span>Juror ${i + 1}<small id="known-value-${i}">unknown</small></span></label>`,
+).join("");
+el("target-juror").addEventListener("change", () => {
+  record.knowledge.target = Number(el<HTMLSelectElement>("target-juror").value);
+  record.knowledge.known = record.knowledge.known.filter((i) => i !== record.knowledge.target);
+  keep();
+  renderInference();
+});
+el("known-jurors").addEventListener("change", (event) => {
+  const field = event.target as HTMLInputElement;
+  const i = Number(field.value);
+  record.knowledge.known = record.knowledge.known.filter((j) => j !== i);
+  if (field.checked) record.knowledge.known.push(i);
+  record.knowledge.known.sort((a, b) => a - b);
+  keep();
+  renderInference();
+});
+button("know-none", () => {
+  record.knowledge.known = [];
+  keep();
+  renderInference();
+});
+button("know-nine", () => {
+  record.knowledge.known = Array.from({ length: PANEL }, (_, i) => i).filter(
+    (i) => i !== record.knowledge.target,
+  );
+  keep();
+  renderInference();
+});
+button("inspect-inference", () => {
+  record.knowledge.inspected = true;
+  keep();
+  renderInference();
+});
 el("reading").innerHTML = readings
   .map((r) => `<option value="${r.id}">${r.reference} · ${r.title}</option>`)
   .join("");
@@ -309,9 +374,13 @@ button("cite", () => {
 el("citations").addEventListener("click", (event) => {
   const id = (event.target as Element).closest<HTMLElement>("[data-remove]")?.dataset.remove;
   if (!id) return;
+  const index = record.citations.indexOf(id);
   record.citations = record.citations.filter((c) => c !== id);
   keep();
   renderCitations();
+  const next = record.citations[Math.min(index, record.citations.length - 1)];
+  if (next) document.querySelector<HTMLButtonElement>(`[data-remove="${next}"]`)?.focus();
+  else el("note").focus();
 });
 document.addEventListener("click", (event) => {
   const id = (event.target as Element).closest<HTMLElement>("[data-reading]")?.dataset.reading;

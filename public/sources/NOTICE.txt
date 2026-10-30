@@ -2,7 +2,10 @@ Psephos retained sources
 
 Primary witness: Aristotelis Atheniensium Respublica, edited by Frederic G.
 Kenyon, Oxford, Clarendon Press, 1920. University of Connecticut Libraries copy,
-Internet Archive identifier aristotelisathen00aris.
+Internet Archive identifier aristotelisathen00aris. The scanned copy is a later
+reprint: its imprint says FIRST PUBLISHED 1920 and lists reprints in 1925,
+1937, 1951 and 1958. Here 1920 identifies the edition, not the printing date
+of the scanned physical volume. The transcription follows the retained pages.
 https://archive.org/details/aristotelisathen00aris
 
 kenyon-p67.jpg and kenyon-p68.jpg are complete printed pages LXVII and
@@ -49,3 +52,8 @@ https://camu.gr/en/item/chalkini-dikastiki-psifos/
 Code, new diagrams and translations: MIT (public/LICENSE.txt).
 Fonts: Literata and Source Sans 3, SIL Open Font License, files in ../fonts/.
 CC BY-SA material retains its own license within the collection and exports.
+
+Bibliographic witness: kenyon-title.jpg and kenyon-imprint.jpg preserve archive
+leaves 7 and 8. They are complete pages, proportionally rescaled within
+1200x2100 pixels, JPEG quality 88. The title identifies Kenyon and Clarendon
+Press; the imprint supports the edition/reprint distinction stated above.

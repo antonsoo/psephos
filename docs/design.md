@@ -59,4 +59,32 @@ The objects, grip, urn distinction and tie rule follow _Athenaion Politeia_
 68.2–69.1. The training panel, pinning, simplified coupled deposit and deliberate
 counting interventions are modern teaching tools. No case, historical verdict,
 original vessel shape, finger anatomy, or perfect secrecy guarantee is invented.
-The supplied Greek is checked against the complete retained 1920 printed pages.
+The supplied Greek is checked against the complete retained Kenyon printed pages and their title/imprint.
+
+## Audit extension: what the count reveals
+
+The original observer drawing isolates the grip. A second work surface will
+isolate the observer's information after the count. The learner chooses a
+target among the ten labeled teaching jurors and marks other choices as
+assumed known. The labels are modern; the historical ballots have no juror IDs.
+
+```text
+public total + explicitly assumed known choices
+                        |
+              compatible assignments
+                 /             \
+       target pierced       target solid
+                 \             /
+            same public evidence?
+```
+
+Keep the existing palette and ballot marks. Place the known-choice controls
+beside two witness arrangements on desktop, then in reading order on a phone.
+Use a table for the exact mapping from target choice to number of assignments.
+Do not call counts probabilities or suggest equally likely human behavior.
+Reveal the reasoning on an explicit action. A five/five total admits 252
+assignments with no other choices known; unanimity admits one. This makes the
+boundary of a concealed grip something the learner can operate.
+
+Both view states and assumptions must travel with the editable record, explicit
+link and illustrated export. Old records keep their facts when reopened.

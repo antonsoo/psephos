@@ -44,14 +44,21 @@
   {
     "path": "sources/NOTICE.txt",
     "mime": "text/plain",
-    "bytes": 3229,
-    "sha256": "80ff2317cf68d56e7e846326a809a2f54af521facf36a44766ba940ac5e1c5eb"
+    "bytes": 3791,
+    "sha256": "907edba211d28b9a62599348b6545bda51f7d4f811fda1174be4261944914613"
   },
   {
     "path": "sources/agora-ballots.jpg",
     "mime": "image/jpeg",
     "bytes": 172863,
     "sha256": "89d926d1e094338f1bdd20234973548fd2f995ef26463cb11550417cda148df3"
+  },
+  {
+    "path": "sources/kenyon-imprint.jpg",
+    "mime": "image/jpeg",
+    "bytes": 204830,
+    "sha256": "96f51e16079965e31b99add41a6b71c3e28c32c279b5d34cced161b15ec65d2f",
+    "printedPage": "Imprint"
   },
   {
     "path": "sources/kenyon-p67.jpg",
@@ -68,6 +75,13 @@
     "printedPage": "LXVIII"
   },
   {
+    "path": "sources/kenyon-title.jpg",
+    "mime": "image/jpeg",
+    "bytes": 214963,
+    "sha256": "155e06a7ebf0670c3a7d8f8a998e33b9143bdc994c4aa693a8a11fbb6e1ecb86",
+    "printedPage": "Title page"
+  },
+  {
     "path": "sources/perseus-grc2.xml",
     "mime": "application/xml",
     "bytes": 264047,
@@ -76,7 +90,7 @@
   {
     "path": "sources/provenance.json",
     "mime": "application/json",
-    "bytes": 2234,
-    "sha256": "449bd572f4c98bbebc1dcd8fcdc64f6f6c5ce2268daa67ef8e757e47a31ccac9"
+    "bytes": 3765,
+    "sha256": "ca7ab5cbb5e0d3307c068b3ecdc4cbf5ecf9c4be162ff4d0bbdc5613646e8b79"
   }
 ]
