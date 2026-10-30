@@ -1,11 +1,11 @@
 {
-  "editionA": "c0879d327916cebc4858",
-  "editionB": "c8edc7e044c34d46fec5",
+  "editionA": "80a1776f6e15df80ae5d",
+  "editionB": "0fc5fed69ecd4a4f849b",
   "workerBuilderSha256": "839938d7f761bb64500445c5912fbe6b6c3e8d6d068a939a5890a21b443d40b6",
   "results": [
     {
       "browser": "chromium",
-      "initialEdition": "c0879d327916cebc4858",
+      "initialEdition": "80a1776f6e15df80ae5d",
       "explicitOfflineIntegrityFailureWithdrawsReadiness": true,
       "nativeImageFailureWithdrawsReadiness": true,
       "otherEditionCacheNotUsed": true,
@@ -18,7 +18,7 @@
     },
     {
       "browser": "firefox",
-      "initialEdition": "c0879d327916cebc4858",
+      "initialEdition": "80a1776f6e15df80ae5d",
       "explicitOfflineIntegrityFailureWithdrawsReadiness": true,
       "nativeImageFailureWithdrawsReadiness": true,
       "otherEditionCacheNotUsed": true,

@@ -1,6 +1,6 @@
 {
   "format": "psephos-court-record",
-  "version": 1,
+  "version": 2,
   "preset": "last-vote",
   "actions": [
     {
@@ -50,6 +50,17 @@
   "observation": {
     "choice": "solid",
     "covered": true
+  },
+  "knowledge": {
+    "target": 9,
+    "known": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "inspected": true
   },
   "note": "Five and five acquit under ἂν δὲ ἴσαι. Replacing a solid ballot leaves ten in total but changes the result. <This is my explanation.>",
   "citations": [

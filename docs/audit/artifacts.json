@@ -1,0 +1,30 @@
+{
+  "producer": "Actual browser downloads and Chromium PDF from the downloaded script-free HTML",
+  "recordVersion": 2,
+  "pdfPages": 14,
+  "pdfTagged": true,
+  "pdfJavascript": false,
+  "allRenderedPagesVisuallyInspected": true,
+  "files": [
+    {
+      "path": "examples/last-vote-count.svg",
+      "bytes": 3886,
+      "sha256": "cd25922e61c6646866c35d83a0b6aedd55678a487899cad648292fb09c370695"
+    },
+    {
+      "path": "examples/last-vote-record.html.gz",
+      "bytes": 3412486,
+      "sha256": "e4451ebe2b681bde20d9d69152d0a2cf606568bc55d53fa7d92e3c2cc535011e"
+    },
+    {
+      "path": "examples/last-vote-record.json",
+      "bytes": 1125,
+      "sha256": "039a4949ba2b49c0f43d57c5f6b0ee9047cd750dcceec09587e62da655c89149"
+    },
+    {
+      "path": "examples/last-vote-record.pdf",
+      "bytes": 3717396,
+      "sha256": "ab4d57a495636be86cc2f94774a477cfa0bdd7ca47e5fc1419c609448d8e8729"
+    }
+  ]
+}

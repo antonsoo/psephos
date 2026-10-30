@@ -1,8 +1,11 @@
 # Psephos review
 
-This is a **local, unpublished edition**. No GitHub repository, hosted bytes,
-remote CI result, or deployment is claimed. The prepared build command is
-`npm run build`, output `dist/`, base `/psephos/`.
+This is the **historical, pre-audit review** of local edition `3c2c1e5`.
+Its receipts describe that earlier build, not the current edition. The later
+[audit](audit.md) records corrected offline readiness, source bibliography,
+the inference investigation and publication evidence. The initial review made
+no publication claim. Build command: `npm run build`, output `dist/`, base
+`/psephos/`.
 
 ## Reproduce the learner's work
 
@@ -60,7 +63,8 @@ overwrite a newly edited explanation.
 
 ## Actual artifacts and visual review
 
-The [artifact receipt](review/artifacts.json) pins the examples below:
+The [artifact receipt](review/artifacts.json) pins the examples at commit
+`3c2c1e5`; the paths below now hold the updated, audited edition:
 - [Editable record](../examples/last-vote-record.json)
 - [Count SVG](../examples/last-vote-count.svg)
 - [Complete illustrated record, gzip](../examples/last-vote-record.html.gz)

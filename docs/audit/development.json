@@ -1,0 +1,10 @@
+{
+  "sourceCommit": "566671d",
+  "node": "24.22.2",
+  "command": "npm run dev",
+  "castAndTieOperated": true,
+  "inference252Operated": true,
+  "imprintLoaded": true,
+  "workerController": null,
+  "errors": []
+}
