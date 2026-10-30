@@ -1,0 +1,96 @@
+[
+  {
+    "path": "LICENSE.txt",
+    "mime": "text/plain",
+    "bytes": 1071,
+    "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81"
+  },
+  {
+    "path": "fonts/literata-OFL.txt",
+    "mime": "text/plain",
+    "bytes": 4389,
+    "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+  },
+  {
+    "path": "fonts/literata.woff2",
+    "mime": "font/woff2",
+    "bytes": 396664,
+    "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db"
+  },
+  {
+    "path": "fonts/provenance.json",
+    "mime": "application/json",
+    "bytes": 637,
+    "sha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2"
+  },
+  {
+    "path": "fonts/sourcesans3-OFL.txt",
+    "mime": "text/plain",
+    "bytes": 4486,
+    "sha256": "ed86f375d70bd39238d13b2ba5bd3bed20b3fe4847fa1356a63f380d2b26a8a5"
+  },
+  {
+    "path": "fonts/sourcesans3.woff2",
+    "mime": "font/woff2",
+    "bytes": 170188,
+    "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8"
+  },
+  {
+    "path": "sources/CC-BY-SA-4.0.txt",
+    "mime": "text/plain",
+    "bytes": 20138,
+    "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+  },
+  {
+    "path": "sources/NOTICE.txt",
+    "mime": "text/plain",
+    "bytes": 3791,
+    "sha256": "907edba211d28b9a62599348b6545bda51f7d4f811fda1174be4261944914613"
+  },
+  {
+    "path": "sources/agora-ballots.jpg",
+    "mime": "image/jpeg",
+    "bytes": 172863,
+    "sha256": "89d926d1e094338f1bdd20234973548fd2f995ef26463cb11550417cda148df3"
+  },
+  {
+    "path": "sources/kenyon-imprint.jpg",
+    "mime": "image/jpeg",
+    "bytes": 204830,
+    "sha256": "96f51e16079965e31b99add41a6b71c3e28c32c279b5d34cced161b15ec65d2f",
+    "printedPage": "Imprint"
+  },
+  {
+    "path": "sources/kenyon-p67.jpg",
+    "mime": "image/jpeg",
+    "bytes": 823814,
+    "sha256": "a0041cfca79448bf40204d66308c73e5dbb5aa51a7ce186894b9f4114963bc71",
+    "printedPage": "LXVII"
+  },
+  {
+    "path": "sources/kenyon-p68.jpg",
+    "mime": "image/jpeg",
+    "bytes": 887885,
+    "sha256": "459982e373f32e0e9fe0c4068d352dc593a05aba533262b58dc3255c75eda300",
+    "printedPage": "LXVIII"
+  },
+  {
+    "path": "sources/kenyon-title.jpg",
+    "mime": "image/jpeg",
+    "bytes": 214963,
+    "sha256": "155e06a7ebf0670c3a7d8f8a998e33b9143bdc994c4aa693a8a11fbb6e1ecb86",
+    "printedPage": "Title page"
+  },
+  {
+    "path": "sources/perseus-grc2.xml",
+    "mime": "application/xml",
+    "bytes": 264047,
+    "sha256": "6e0c298a511e05d9e287860f1c98344f4c409ed5f6f18e8c9ef0cb6974ae8e1a"
+  },
+  {
+    "path": "sources/provenance.json",
+    "mime": "application/json",
+    "bytes": 3765,
+    "sha256": "ca7ab5cbb5e0d3307c068b3ecdc4cbf5ecf9c4be162ff4d0bbdc5613646e8b79"
+  }
+]
