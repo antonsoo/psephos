@@ -1,0 +1,12 @@
+{
+  "sourceCommit": "ab62d8a",
+  "node": "v24.22.2",
+  "command": "npm run dev",
+  "sourcePageAndTieOperated": true,
+  "workers": {
+    "registrations": 0,
+    "controller": false
+  },
+  "errors": [],
+  "consoleErrors": []
+}

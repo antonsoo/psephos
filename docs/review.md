@@ -96,8 +96,17 @@ retained artifacts. The final witness is printed LXVII/LXVIII, archive leaves
 covers all 1,024 ten-vote assignments. It checks the defined arithmetic and
 source-concordance table; it is not independent scholarly review.
 
-The final clean-install receipt is retained separately in
-`review/clean-build.json`. Browser evidence, clean-build identity and any future
+The [clean-install receipt](review/clean-build.json) records a fresh archive of
+`ab62d8a`, Node **24.22.2**, and successful `npm ci`, `npm run check` and
+the documented `gzip -dk` command. All **19** complete output files, **2,835,311
+bytes**, match the reviewed Node 26 build byte for byte. The worker's verified
+cache inventory contains 18 files; the generated worker itself is the nineteenth
+output file. The [development receipt](review/development.json) separately
+operates the pair, tie and correct source page from that clean checkout using
+the documented `npm run dev` command, with no worker installed and no page or
+console errors.
+
+Browser evidence, clean-build identity and any future
 publication must remain separate claims. The CI and branch-based Pages workflows
 are prepared. Their checkout and setup-node `v7` tags were resolved read-only;
 no workflow was remotely executed.

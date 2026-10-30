@@ -1,0 +1,124 @@
+{
+  "sourceCommit": "ab62d8a381c64b20085a0947bbbfcf8ee9ae7eef",
+  "node": "v24.22.2",
+  "commands": [
+    {
+      "command": "node --version",
+      "exitCode": 0
+    },
+    {
+      "command": "npm ci",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run check",
+      "exitCode": 0
+    },
+    {
+      "command": "gzip -dk examples/last-vote-record.html.gz",
+      "exitCode": 0
+    }
+  ],
+  "completeBuildFiles": 19,
+  "completeBuildBytes": 2835311,
+  "byteIdenticalToReviewedBuild": true,
+  "files": [
+    {
+      "path": "LICENSE.txt",
+      "bytes": 1071,
+      "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81"
+    },
+    {
+      "path": "assets/index-DEkXZ84p.css",
+      "bytes": 12784,
+      "sha256": "2febb92df90de759b70f381581d92df088df940e327de01f54a15a710f237e9c"
+    },
+    {
+      "path": "assets/index-qAXOHw1G.js",
+      "bytes": 48483,
+      "sha256": "09b8c542dc1e5db4144ee78e5f8f0ab1a1b49b3ef9d6c894f63d177e1c7e4b0d"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 291,
+      "sha256": "7bdcefd50abdaa41d4b05a497420be430c31b67df2cc01b23727ce1b2d40c74c"
+    },
+    {
+      "path": "fonts/literata-OFL.txt",
+      "bytes": 4389,
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+    },
+    {
+      "path": "fonts/literata.woff2",
+      "bytes": 396664,
+      "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db"
+    },
+    {
+      "path": "fonts/provenance.json",
+      "bytes": 637,
+      "sha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2"
+    },
+    {
+      "path": "fonts/sourcesans3-OFL.txt",
+      "bytes": 4486,
+      "sha256": "ed86f375d70bd39238d13b2ba5bd3bed20b3fe4847fa1356a63f380d2b26a8a5"
+    },
+    {
+      "path": "fonts/sourcesans3.woff2",
+      "bytes": 170188,
+      "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8"
+    },
+    {
+      "path": "index.html",
+      "bytes": 14276,
+      "sha256": "90529c9fb7d1ba559b1651f7b2de196c2f223eb3fc0938353e9ed00822e3d089"
+    },
+    {
+      "path": "sources/CC-BY-SA-4.0.txt",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+    },
+    {
+      "path": "sources/NOTICE.txt",
+      "bytes": 3229,
+      "sha256": "80ff2317cf68d56e7e846326a809a2f54af521facf36a44766ba940ac5e1c5eb"
+    },
+    {
+      "path": "sources/agora-ballots.jpg",
+      "bytes": 172863,
+      "sha256": "89d926d1e094338f1bdd20234973548fd2f995ef26463cb11550417cda148df3"
+    },
+    {
+      "path": "sources/kenyon-p67.jpg",
+      "bytes": 823814,
+      "sha256": "a0041cfca79448bf40204d66308c73e5dbb5aa51a7ce186894b9f4114963bc71"
+    },
+    {
+      "path": "sources/kenyon-p68.jpg",
+      "bytes": 887885,
+      "sha256": "459982e373f32e0e9fe0c4068d352dc593a05aba533262b58dc3255c75eda300"
+    },
+    {
+      "path": "sources/manifest.json",
+      "bytes": 2332,
+      "sha256": "9ba5eeadc07d708be543560d62591acdc6fe47afa95cd1fff66d2bc35dbf4d93"
+    },
+    {
+      "path": "sources/perseus-grc2.xml",
+      "bytes": 264047,
+      "sha256": "6e0c298a511e05d9e287860f1c98344f4c409ed5f6f18e8c9ef0cb6974ae8e1a"
+    },
+    {
+      "path": "sources/provenance.json",
+      "bytes": 2234,
+      "sha256": "449bd572f4c98bbebc1dcd8fcdc64f6f6c5ce2268daa67ef8e757e47a31ccac9"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 5500,
+      "sha256": "2b4165a50ae76f63d5625295bd4cf0664126a3d43ff8340c20672470211b284a"
+    }
+  ],
+  "remoteCiExecuted": false,
+  "published": false
+}
