@@ -1,6 +1,6 @@
 {
   "name": "@antonsoloviev/psephos",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "description": "Cast a concealed Athenian jury ballot, count the right urn, and read the Greek that decides a tie.",
@@ -35,7 +35,9 @@
     "test:browser": "node scripts/browser.mjs",
     "check": "npm run lint && npm run typecheck && npm test && npm run verify:sources && npm run build",
     "test:audit": "node scripts/offline-audit.mjs",
-    "test:public": "node scripts/public-browser.mjs"
+    "test:public": "node scripts/public-browser.mjs",
+    "test:allotment": "node scripts/allotment-browser.mjs",
+    "verify:allotment-source": "python3 scripts/verify-allotment-sources.py"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

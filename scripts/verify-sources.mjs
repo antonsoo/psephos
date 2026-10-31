@@ -26,3 +26,17 @@ for (const page of Object.values(sourcePages)) {
   assert.equal(origin?.printedPage, page.label, page.image);
 }
 console.log("All four source-viewer entries match the retained page and archive-leaf mapping.");
+
+const allotmentManifest = JSON.parse(await readFile("src/allotment-assets.json", "utf8"));
+assert.deepEqual(
+  JSON.parse(await readFile("public/sources/allotment-manifest.json", "utf8")),
+  allotmentManifest,
+);
+for (const item of allotmentManifest) {
+  const bytes = await readFile(`public/${item.path}`);
+  assert.equal(bytes.length, item.bytes, item.path);
+  assert.equal(createHash("sha256").update(bytes).digest("hex"), item.sha256, item.path);
+}
+console.log(
+  `${allotmentManifest.length} allotment source, font and license identities also match.`,
+);
