@@ -1,0 +1,183 @@
+{
+  "source": "7842151",
+  "node": "26.7.0",
+  "npm": "12.0.1",
+  "files": [
+    {
+      "path": "LICENSE.txt",
+      "bytes": 1071,
+      "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81"
+    },
+    {
+      "path": "allotment.html",
+      "bytes": 11759,
+      "sha256": "a610370ff73499f8810bffa664cdcd705efc4692500883666dc8539233a77794"
+    },
+    {
+      "path": "assets/allotment-DopiqGfu.js",
+      "bytes": 10911,
+      "sha256": "7c09c783353849d887449815bca3790fb72b0bbed5f3abb48a8a585a489631c2"
+    },
+    {
+      "path": "assets/attendance-BUKQvcIA.js",
+      "bytes": 27998,
+      "sha256": "7dfc8a7f9832c3188ca473cfdc78def7c6b444428c8bac69a35113c6c7785a25"
+    },
+    {
+      "path": "assets/attendance-v8Dd9DFG.css",
+      "bytes": 2923,
+      "sha256": "05e38aeb55458a7664c482292e1c4291f6083db32ac855a9fa4382458c4d6437"
+    },
+    {
+      "path": "assets/ballots-o8hj_wlC.js",
+      "bytes": 52118,
+      "sha256": "3daacdaa88a49e87a156b5138954d2507923e8faba12e5a174b33acfb42d79b7"
+    },
+    {
+      "path": "assets/offline-B4m_OaeV.js",
+      "bytes": 7363,
+      "sha256": "5f7874a43dc1629410e4056c44362758c8780fdb1c530ce7215f664e083e3174"
+    },
+    {
+      "path": "assets/offline-Dk6HhNuE.css",
+      "bytes": 14635,
+      "sha256": "7c600bc0a1c767ba9cd8bd43f277740f7afc32bb1d5de29772fc5f3a22d85ea0"
+    },
+    {
+      "path": "assets/source-reader-jFK7X_EK.css",
+      "bytes": 4144,
+      "sha256": "d0243b79c05d228891e9164fa74427e7432d2d3933b3130bef2ca87652be95bc"
+    },
+    {
+      "path": "assets/source-reader-lnPPveri.js",
+      "bytes": 29716,
+      "sha256": "5de3c655dc83ca6e94e0e1c109d615543886c784fab26e4b9fe4c3a915a59cef"
+    },
+    {
+      "path": "attendance.html",
+      "bytes": 13144,
+      "sha256": "6f11607061ded4629ad59e3c4b2bb8d137921b3efabcac2dcbeb5f4bb641dca7"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 291,
+      "sha256": "7bdcefd50abdaa41d4b05a497420be430c31b67df2cc01b23727ce1b2d40c74c"
+    },
+    {
+      "path": "fonts/literata-OFL.txt",
+      "bytes": 4389,
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+    },
+    {
+      "path": "fonts/literata.woff2",
+      "bytes": 396664,
+      "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db"
+    },
+    {
+      "path": "fonts/provenance.json",
+      "bytes": 637,
+      "sha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2"
+    },
+    {
+      "path": "fonts/sourcesans3-OFL.txt",
+      "bytes": 4486,
+      "sha256": "ed86f375d70bd39238d13b2ba5bd3bed20b3fe4847fa1356a63f380d2b26a8a5"
+    },
+    {
+      "path": "fonts/sourcesans3.woff2",
+      "bytes": 170188,
+      "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8"
+    },
+    {
+      "path": "index.html",
+      "bytes": 16525,
+      "sha256": "349b81077d0b8c36de260619a6a60468cf1132e674c131e384349908da9b06fc"
+    },
+    {
+      "path": "sources/CC-BY-SA-4.0.txt",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5"
+    },
+    {
+      "path": "sources/NOTICE.txt",
+      "bytes": 3791,
+      "sha256": "907edba211d28b9a62599348b6545bda51f7d4f811fda1174be4261944914613"
+    },
+    {
+      "path": "sources/agora-ballots.jpg",
+      "bytes": 172863,
+      "sha256": "89d926d1e094338f1bdd20234973548fd2f995ef26463cb11550417cda148df3"
+    },
+    {
+      "path": "sources/allotment-NOTICE.txt",
+      "bytes": 1770,
+      "sha256": "12262e6a7a8498c315247518c7e0abd5ce33d292ec72733620a8ed1fcc7a9ac0"
+    },
+    {
+      "path": "sources/allotment-manifest.json",
+      "bytes": 2534,
+      "sha256": "cd0003b3499d0b6afd00a230a79fe8a777484c884b9c5b270239ac86eed4de1f"
+    },
+    {
+      "path": "sources/allotment-provenance.json",
+      "bytes": 1385,
+      "sha256": "f7dac2b717dd4772c098bf01c0010364f48286a5965ce02baf08b2ef95cd36d9"
+    },
+    {
+      "path": "sources/kenyon-imprint.jpg",
+      "bytes": 204830,
+      "sha256": "96f51e16079965e31b99add41a6b71c3e28c32c279b5d34cced161b15ec65d2f"
+    },
+    {
+      "path": "sources/kenyon-leaf76.jpg",
+      "bytes": 527287,
+      "sha256": "bf3a3cca4bc30b275659b3a1278ad488c93c703789091933f4edffcb496d6a50"
+    },
+    {
+      "path": "sources/kenyon-leaf77.jpg",
+      "bytes": 536153,
+      "sha256": "3447c785188478565385537024b21cff49c4b7488bc3208c4338c793c81dedfc"
+    },
+    {
+      "path": "sources/kenyon-leaf78.jpg",
+      "bytes": 574876,
+      "sha256": "405b72d12f2425f37e26d3148c2814b778aa71dde0f231dc149be1fd3addd5aa"
+    },
+    {
+      "path": "sources/kenyon-p67.jpg",
+      "bytes": 823814,
+      "sha256": "a0041cfca79448bf40204d66308c73e5dbb5aa51a7ce186894b9f4114963bc71"
+    },
+    {
+      "path": "sources/kenyon-p68.jpg",
+      "bytes": 887885,
+      "sha256": "459982e373f32e0e9fe0c4068d352dc593a05aba533262b58dc3255c75eda300"
+    },
+    {
+      "path": "sources/kenyon-title.jpg",
+      "bytes": 214963,
+      "sha256": "155e06a7ebf0670c3a7d8f8a998e33b9143bdc994c4aa693a8a11fbb6e1ecb86"
+    },
+    {
+      "path": "sources/manifest.json",
+      "bytes": 2751,
+      "sha256": "b0db5528eb81c924b26ee6f64fa481382eefe3ad6d32332fa6537ca7cb735325"
+    },
+    {
+      "path": "sources/perseus-grc2.xml",
+      "bytes": 264047,
+      "sha256": "6e0c298a511e05d9e287860f1c98344f4c409ed5f6f18e8c9ef0cb6974ae8e1a"
+    },
+    {
+      "path": "sources/provenance.json",
+      "bytes": 3765,
+      "sha256": "ca7ab5cbb5e0d3307c068b3ecdc4cbf5ecf9c4be162ff4d0bbdc5613646e8b79"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 8592,
+      "sha256": "a3af17c28dccd21e89ca21528a6a2f898c34de03f972f7a86e68f1bf61c33ae8"
+    }
+  ],
+  "allFilesIdentical": true
+}
