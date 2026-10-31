@@ -121,7 +121,7 @@ try {
         await page
           .locator("#attendance-note")
           .fill(
-            "The same ten fill two rows only when each group has two. <Counts are known>; the 4.21% concerns a new uniform sample, not doubt about this board. παραπλησίως ἴσοι.",
+            "The same ten fill two rows only when each group has two. Counts are known; the 4.21% concerns a new uniform sample, not doubt about this board. A & E can have different attendance. παραπλησίως ἴσοι.",
           );
         await page.locator("#allotment-words button").filter({ hasText: "παραπλησίως" }).click();
         await has(page, "allotment-word-note", "Approximately equal");
@@ -141,7 +141,7 @@ try {
         const html = await download(page, "attendance-save-html", `${name}-${width}-reading.html`);
         const content = html.bytes.toString();
         assert.doesNotMatch(content, /<script\b/i);
-        assert.match(content, /&lt;Counts are known&gt;/);
+        assert.match(content, /A &amp; E/);
         const embedded = [...content.matchAll(/data:[^;]+;base64,([A-Za-z0-9+/=]+)/g)].map((m) =>
           Buffer.from(m[1], "base64"),
         );

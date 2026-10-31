@@ -1,0 +1,42 @@
+{
+  "reviewedSource": "78421517f1a0ddd7240dce044856e321780f4b63",
+  "initialPublishedSource": "6a807c3c7704ece070a6237d02535e17daf28377",
+  "edition": "5202dfb54367e0771cc2",
+  "pagesCommit": "1d68af56f2697db63d9210eb195f0c1333d287dd",
+  "builtBy": "npm ci; npm run check; clean archive of 7842151",
+  "pagesBuild": {
+    "status": "built",
+    "commit": "1d68af56f2697db63d9210eb195f0c1333d287dd",
+    "created_at": "2026-10-31T21:31:20Z",
+    "updated_at": "2026-10-31T21:32:02Z"
+  },
+  "workflowRuns": [
+    {
+      "id": 41243937072,
+      "jobs": [
+        {
+          "name": "check",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at": "2026-10-31T21:30:54Z",
+          "completed_at": "2026-10-31T21:30:56Z",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": 41243937168,
+      "jobs": [
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at": "2026-10-31T21:30:54Z",
+          "completed_at": "2026-10-31T21:30:56Z",
+          "steps": []
+        }
+      ]
+    }
+  ],
+  "registryRelease": false
+}

@@ -32,6 +32,18 @@ With four possible people in each group and a request for two:
 7. Reopen JSON. Copy an explicit study link: both boards survive, the explanation
    stays out, and editing does not silently change the address. There is no autosave.
 
+## Try the row-selection comparison
+
+Open [One cube. Five tickets.](https://antonsoo.github.io/psephos/allotment.html#allotment).
+Keep the default A1/B1 board and inspect chances. Move the second ticket down:
+the individual chances stay `1/2`, but both-selected changes from `1/2` to `1/6`.
+The kept comparison records that difference. Choose a colour strip with the
+keyboard; focus remains available. Undo all four cubes and release a random
+one: it has no chosen prefix. Read **One white cube, five tickets**, select its
+Greek phrase, and inspect the complete page and the separate inserter clause.
+The [earlier detailed journey](allotment-review.md#try-the-actual-work) covers the
+unknown-placement assumption and portable studies.
+
 ## Defects reproduced before repair
 
 The previous local allotment delivery was independently replayed from its retained
