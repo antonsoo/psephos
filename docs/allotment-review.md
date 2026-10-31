@@ -1,5 +1,9 @@
 # Jury allotment workshop review
 
+This is the retained review of the initial local delivery. The subsequent
+[attendance and work-preservation audit](attendance-review.md) records corrections
+and the [publication record](attendance-publication.md) records the public edition.
+
 The new `allotment.html` makes a question operable that the ballot lesson did
 not address: how fixed ticket placement changes the chance that two ordinary
 jurors enter the service pool together. An additional experiment changes the

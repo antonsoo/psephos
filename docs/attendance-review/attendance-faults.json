@@ -1,0 +1,24 @@
+[
+  {
+    "browser": "chromium",
+    "passed": true,
+    "sameLengthSubstitutionRejected": true,
+    "cancellationWithoutDownload": true,
+    "exportSnapshotPreserved": true,
+    "lateImportCannotReplaceLatestChoice": true,
+    "editDuringImportPreserved": true,
+    "readerFragmentOperated": true,
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "passed": true,
+    "sameLengthSubstitutionRejected": true,
+    "cancellationWithoutDownload": true,
+    "exportSnapshotPreserved": true,
+    "lateImportCannotReplaceLatestChoice": true,
+    "editDuringImportPreserved": true,
+    "readerFragmentOperated": true,
+    "errors": []
+  }
+]

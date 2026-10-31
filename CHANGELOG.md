@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.0 — 2026-10-31
+
+- Make the full-row assumption operable: keep a total, exchange who attends, and compare group shortages against the same-total balanced case.
+- Expose exact finite-population chances, unequally weighted count patterns and a sharp guaranteed-total counterexample, beside the Greek registered-groups clause.
+- Save attendance as editable JSON, complete weighted CSV, count SVG and a script-free illustrated reading with checked primary pages, fonts and licenses.
+- Preserve keyboard focus after row/order/comparison edits; restore the random-draw label after undoing an entire chosen sequence; fit 320px controls.
+- Explain how to adopt a waiting edition without losing editable work; operate a two-workshop close/reopen/import/offline update journey.
+- Reject stale attendance file reads after a newer selection or intervening edit.
+
+
 ## 0.3.0 — 2026-10-31
 
 - Add a five-column ordinary-ticket allotment board, keeping two identities

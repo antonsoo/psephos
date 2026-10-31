@@ -1,0 +1,87 @@
+{
+  "base": "http://127.0.0.1:43319/psephos/",
+  "receipts": [
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "passed": true,
+      "a11yViolations": 0,
+      "realOutageReload": true,
+      "splitCountAndFiveKnownChoicesOperated": true,
+      "observerKnowledgeRetainedInArtifactsAndLinks": true,
+      "offlineArtifactSha256": "4f42e31828de6dfc1051f9a1b4a206c973f125666a4b24659a6fc151b09ad101",
+      "htmlSha256": "4f42e31828de6dfc1051f9a1b4a206c973f125666a4b24659a6fc151b09ad101",
+      "embeddedSourceImages": 5,
+      "embeddedFileIdentities": 15,
+      "damagedCacheRefusedAndRepaired": true,
+      "errors": [],
+      "external": []
+    },
+    {
+      "browser": "chromium",
+      "width": 375,
+      "passed": true,
+      "a11yViolations": 0,
+      "realOutageReload": true,
+      "splitCountAndFiveKnownChoicesOperated": true,
+      "observerKnowledgeRetainedInArtifactsAndLinks": true,
+      "offlineArtifactSha256": "4f42e31828de6dfc1051f9a1b4a206c973f125666a4b24659a6fc151b09ad101",
+      "htmlSha256": "4f42e31828de6dfc1051f9a1b4a206c973f125666a4b24659a6fc151b09ad101",
+      "embeddedSourceImages": 5,
+      "embeddedFileIdentities": 15,
+      "damagedCacheRefusedAndRepaired": true,
+      "errors": [],
+      "external": []
+    },
+    {
+      "browser": "chromium",
+      "sourceSubstitutionRefused": true,
+      "sourceRecovery": true,
+      "staleSourceIgnored": true,
+      "exportSnapshotPreserved": true,
+      "exportCancellationKeptWork": true,
+      "delayedImportKeptWork": true
+    },
+    {
+      "browser": "firefox",
+      "width": 1440,
+      "passed": true,
+      "a11yViolations": 0,
+      "realOutageReload": true,
+      "splitCountAndFiveKnownChoicesOperated": true,
+      "observerKnowledgeRetainedInArtifactsAndLinks": true,
+      "offlineArtifactSha256": "4f42e31828de6dfc1051f9a1b4a206c973f125666a4b24659a6fc151b09ad101",
+      "htmlSha256": "4f42e31828de6dfc1051f9a1b4a206c973f125666a4b24659a6fc151b09ad101",
+      "embeddedSourceImages": 5,
+      "embeddedFileIdentities": 15,
+      "damagedCacheRefusedAndRepaired": true,
+      "errors": [],
+      "external": []
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "passed": true,
+      "a11yViolations": 0,
+      "realOutageReload": true,
+      "splitCountAndFiveKnownChoicesOperated": true,
+      "observerKnowledgeRetainedInArtifactsAndLinks": true,
+      "offlineArtifactSha256": "4f42e31828de6dfc1051f9a1b4a206c973f125666a4b24659a6fc151b09ad101",
+      "htmlSha256": "4f42e31828de6dfc1051f9a1b4a206c973f125666a4b24659a6fc151b09ad101",
+      "embeddedSourceImages": 5,
+      "embeddedFileIdentities": 15,
+      "damagedCacheRefusedAndRepaired": true,
+      "errors": [],
+      "external": []
+    },
+    {
+      "browser": "firefox",
+      "sourceSubstitutionRefused": true,
+      "sourceRecovery": true,
+      "staleSourceIgnored": true,
+      "exportSnapshotPreserved": true,
+      "exportCancellationKeptWork": true,
+      "delayedImportKeptWork": true
+    }
+  ]
+}

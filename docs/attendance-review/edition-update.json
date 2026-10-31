@@ -1,0 +1,28 @@
+{
+  "editionA": "5202dfb54367e0771cc2",
+  "editionB": "b50c2d373264ce5f1ee5",
+  "results": [
+    {
+      "browser": "chromium",
+      "waitingEditionExplainedOnBothPages": true,
+      "oldDocumentMismatchRefused": true,
+      "readinessWithdrawnOnBothPages": true,
+      "editableWorkSavedBeforeClose": true,
+      "nextEditionActivatedAfterApplicationTabsClosed": true,
+      "currentAndKeptCountsRestored": true,
+      "explanationRestoredOffline": true,
+      "oldCacheRemoved": true
+    },
+    {
+      "browser": "firefox",
+      "waitingEditionExplainedOnBothPages": true,
+      "oldDocumentMismatchRefused": true,
+      "readinessWithdrawnOnBothPages": true,
+      "editableWorkSavedBeforeClose": true,
+      "nextEditionActivatedAfterApplicationTabsClosed": true,
+      "currentAndKeptCountsRestored": true,
+      "explanationRestoredOffline": true,
+      "oldCacheRemoved": true
+    }
+  ]
+}

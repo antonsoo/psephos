@@ -1,0 +1,29 @@
+{
+  "format": "psephos-attendance",
+  "version": 1,
+  "current": {
+    "population": 4,
+    "quota": 2,
+    "counts": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "origin": "constructed"
+  },
+  "pinned": {
+    "population": 4,
+    "quota": 2,
+    "counts": [
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "origin": "constructed"
+  },
+  "note": "The same ten fill two rows only when each group has two. <Counts are known>; the 4.21% concerns a new uniform sample, not doubt about this board. παραπλησίως ἴσοι."
+}

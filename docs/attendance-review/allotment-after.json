@@ -1,0 +1,34 @@
+{
+  "baseline": false,
+  "entrySha256": "a610370ff73499f8810bffa664cdcd705efc4692500883666dc8539233a77794",
+  "results": [
+    {
+      "browser": "chromium",
+      "baseline": false,
+      "orderFocus": {
+        "tag": "BUTTON",
+        "order": "0"
+      },
+      "restoreFocus": "restore-kept",
+      "drawMessage": "Row 1: white; its five ordinary tickets enter the service pool. The next cube comes from the remaining supply.",
+      "viewportWidth": 320,
+      "pageWidth": 320,
+      "ticketWidth": 45,
+      "ticketHeight": 44
+    },
+    {
+      "browser": "firefox",
+      "baseline": false,
+      "orderFocus": {
+        "tag": "BUTTON",
+        "order": "0"
+      },
+      "restoreFocus": "restore-kept",
+      "drawMessage": "Row 1: black; its five ordinary tickets are rejected. The next cube comes from the remaining supply.",
+      "viewportWidth": 320,
+      "pageWidth": 320,
+      "ticketWidth": 45,
+      "ticketHeight": 44
+    }
+  ]
+}

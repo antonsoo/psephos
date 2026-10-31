@@ -1,6 +1,6 @@
 # Psephos
 
-**Move Athenian juror tickets, test their chances together, then cast a concealed vote. Read the Greek behind both procedures.**
+**Who turns up? Who gets selected? What does the count reveal? Operate three Athenian jury experiments and read their Greek.**
 
 [![MIT license](https://img.shields.io/badge/code-MIT-26766c)](LICENSE)
 [![Live workbench](https://img.shields.io/badge/Live-workbench-153d39)](https://antonsoo.github.io/psephos/)
@@ -21,7 +21,7 @@ It does not invent a historical trial to win.
 
 ## One cube, five tickets
 
-The new workshop in this checkout, **`allotment.html`**, asks whether two jurors
+The [row-selection workshop](https://antonsoo.github.io/psephos/allotment.html#allotment) asks whether two jurors
 enter the service pool together. Keep the first board, swap B1 with B2 using the
 actual slot buttons, then inspect every possible white/black cube order.
 
@@ -71,8 +71,36 @@ selected for service does not mean both assigned to the same courtroom.
 [SVG board](examples/allotment-board.svg) ·
 [Printed reading](examples/allotment-reading.pdf) ·
 [Illustrated reading, gzip-compressed](examples/allotment-reading.html.gz).
-Decompress the HTML before opening it. Local source and browser evidence are
-recorded separately from publication; no deployment of this addition is asserted.
+Decompress the HTML before opening it. The earlier review records its local delivery;
+the [attendance and publication audit](docs/attendance-review.md) records the subsequent edition.
+
+## Enough in total. One group empty.
+
+[Who turns up?](https://antonsoo.github.io/psephos/attendance.html#attendance) tests
+the assumption hidden by a board of complete rows. Start with attendance
+4–3–2–1–0 in five groups. Keep it. Exchange who attends until the same ten people
+in total are distributed 2–2–2–2–2. Nobody changes their registered group.
+
+![The same total supplies two complete rows after exchanging who attends](docs/assets/attendance-balanced-1440.png)
+
+Enough in total need not mean enough in every group. For five groups of four
+potential people and a request for two per group, an unknown uniform ten-person
+subset meets every group in only **7,776 of 184,756** cases (about **4.21%**).
+The 381 count patterns are not equally likely: the balanced pattern represents
+7,776 individual subsets; 4–3–2–1–0 represents 96. Inspect every weight, sample
+without replacement, and construct the sharp failure one below the guaranteed
+total. Keep the comparison, explain it, and export a script-free illustrated
+study with complete source pages and editable native files.
+
+This is a small modern finite-population model. Approximately equal registered
+groups in 63.4 do not establish equal daily turnout. The text does not explain
+what officials did with an insufficient group. The experiment makes that
+uncertainty visible; it does not infer a historical turnout rate or court closure.
+
+[Model and proof](docs/attendance-model.md) · [Audit evidence](docs/attendance-review.md) ·
+[Editable study](examples/attendance-study.json) · [Weighted CSV](examples/attendance-study.csv) ·
+[Count SVG](examples/attendance-counts.svg) · [Printed reading](examples/attendance-reading.pdf) ·
+[Illustrated reading, gzip-compressed](examples/attendance-reading.html.gz).
 
 ## Try it
 
@@ -85,7 +113,8 @@ npm run dev
 ```
 
 Open **http://127.0.0.1:4382/psephos/** for ballots, or
-**http://127.0.0.1:4382/psephos/allotment.html** for the new board.
+**http://127.0.0.1:4382/psephos/allotment.html** for row selection, or
+**http://127.0.0.1:4382/psephos/attendance.html** for attendance.
 For a production preview:
 
 ```sh
@@ -94,7 +123,7 @@ npm run preview
 ```
 
 Open **http://127.0.0.1:4381/psephos/**. Build output is **`dist/`**, using
-base **`/psephos/`**; both `index.html` and `allotment.html` are entry points. Development uses a separate origin and installs no worker.
+base **`/psephos/`**; `index.html`, `allotment.html` and `attendance.html` are entry points. Development uses a separate origin and installs no worker.
 The complete edition can be read offline after the production footer confirms
 that every file is retained. Production is served from `gh-pages`; source checks,
 clean-build identity and hosted-browser evidence are recorded separately in the

@@ -1,0 +1,7 @@
+{
+  "configurations": 36,
+  "exactCurvePoints": 1196,
+  "method": "Independent itertools.product enumeration of all five-group count vectors with math.comb weights and Fraction",
+  "csvPatternsChecked": true,
+  "passed": true
+}
