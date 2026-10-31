@@ -275,3 +275,24 @@
 .allotment-page #allotment-reading {
   width: 100%;
 }
+
+.allotment-page .keep > div {
+  min-width: 0;
+}
+.allotment-page input[type="file"] {
+  width: 100%;
+}
+@media (max-width: 360px) {
+  .ticket-table {
+    border-spacing: 2px 8px;
+    padding: 8px 0;
+  }
+  .ticket-table .row-number {
+    width: 14px;
+  }
+  .ticket-table .row-decision {
+    width: 25px;
+    font-size: 11px;
+    overflow-wrap: anywhere;
+  }
+}

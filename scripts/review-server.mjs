@@ -23,6 +23,9 @@ export function reviewServer(root) {
     get base() {
       return `http://127.0.0.1:${port}/psephos/`;
     },
+    get observer() {
+      return `http://127.0.0.1:${port}/__psephos-review`;
+    },
     use(next) {
       directory = resolve(next);
     },
@@ -31,6 +34,18 @@ export function reviewServer(root) {
       server = createServer(async (req, res) => {
         try {
           const path = new URL(req.url, "http://localhost").pathname;
+          // A real same-origin document outside the app's worker scope lets
+          // update reviews observe activation without retaining the old app.
+          if (path === "/__psephos-review") {
+            res.writeHead(200, {
+              "Content-Type": "text/html; charset=utf-8",
+              "Cache-Control": "no-store",
+            });
+            res.end(
+              "<!doctype html><html lang='en'><title>Review observer</title><body>Service worker review observer.</body></html>",
+            );
+            return;
+          }
           if (!path.startsWith("/psephos/")) {
             res.writeHead(404).end();
             return;

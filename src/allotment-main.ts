@@ -1,20 +1,16 @@
 import "./style.css";
 import "./allotment-style.css";
-import retained from "./allotment-assets.json";
-import { allotmentPages, allotmentReadings } from "./allotment-readings";
 import {
   allotmentCsv,
   boardSvg,
   chanceTable,
   comparison,
-  esc,
   illustratedAllotment,
   placementTable,
   relation,
   saveAllotmentFile,
   ticketStatus,
 } from "./allotment-view";
-import { verifiedBytes } from "./assets";
 import {
   allotmentFromLink,
   allotmentLink,
@@ -28,8 +24,10 @@ import {
   shuffled,
   swapTickets,
   ticketRow,
+  undoCube,
 } from "./core/allotment";
 import { installOffline } from "./offline";
+import { installSourceReader } from "./source-reader";
 
 function el<T extends HTMLElement = HTMLElement>(id: string): T {
   const element = document.getElementById(id);
@@ -50,9 +48,6 @@ let record = freshAllotment();
 let pendingTicket: string | null = null;
 let inspected = false;
 let revision = 0;
-let scanRequest = 0;
-let scanController: AbortController | null = null;
-let scanUrl: string | null = null;
 let exportController: AbortController | null = null;
 try {
   const shared = allotmentFromLink(location.hash);
@@ -83,6 +78,10 @@ function identityOptions(): void {
   select("second-ticket").innerHTML = options;
 }
 function render(): void {
+  const focused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  const focusId = focused?.id;
+  const focusTicket = focused?.dataset.ticket;
+  const focusOrder = focused?.dataset.order;
   const study = record.study;
   const drawn = study.draws.length > 0;
   select("row-count").value = String(study.rows);
@@ -154,6 +153,22 @@ function render(): void {
       .join("");
   }
   el("pinned-board").innerHTML = comparison(record);
+  if (
+    focused &&
+    (!focused.isConnected || (focused instanceof HTMLButtonElement && focused.disabled))
+  ) {
+    const target = focusTicket
+      ? el("ticket-board").querySelector<HTMLElement>(`[data-ticket="${focusTicket}"]`)
+      : focusOrder !== undefined
+        ? el("order-list").querySelector<HTMLElement>(`[data-order="${focusOrder}"]`)
+        : focusId
+          ? document.getElementById(focusId)
+          : null;
+    if (target && !(target instanceof HTMLButtonElement && target.disabled))
+      target.focus({ preventScroll: true });
+    else if (focusId === "clear-kept") button("keep-board").focus({ preventScroll: true });
+    else if (focusId === "release-cube") button("undo-cube").focus({ preventScroll: true });
+  }
 }
 function attempt(action: () => void): void {
   try {
@@ -242,7 +257,7 @@ on("release-cube", () =>
   }),
 );
 on("undo-cube", () => {
-  record.study.draws.pop();
+  record.study = undoCube(record.study);
   changed();
   message(
     "Last cube returned to the supply. Earlier rows were kept. This is an editable experiment, not a physical lottery record.",
@@ -293,108 +308,7 @@ el("order-list").addEventListener("click", (event) => {
   );
 });
 
-select("allotment-reading").innerHTML = allotmentReadings
-  .map((r) => `<option value="${r.id}">${esc(r.title)}</option>`)
-  .join("");
-select("allotment-page").innerHTML = allotmentPages
-  .map((p) => `<option value="${p.id}">${esc(p.label)}</option>`)
-  .join("");
-async function loadScan(): Promise<void> {
-  const request = ++scanRequest;
-  scanController?.abort();
-  const controller = new AbortController();
-  scanController = controller;
-  const page =
-    allotmentPages.find((p) => p.id === select("allotment-page").value) ?? allotmentPages[1];
-  const item = retained.find((a) => a.path === page.path);
-  if (!item) return;
-  const img = el<HTMLImageElement>("allotment-scan");
-  img.hidden = true;
-  el("allotment-scan-status").textContent = "Loading and checking the complete printed page…";
-  el<HTMLAnchorElement>("allotment-archive").href =
-    `https://archive.org/details/aristotelisathen00aris/page/n${page.leaf}/mode/1up`;
-  let url: string | null = null;
-  try {
-    const bytes = await verifiedBytes(item, controller.signal);
-    url = URL.createObjectURL(new Blob([bytes], { type: "image/jpeg" }));
-    // Decode in isolation before replacing the visible image. Firefox can
-    // reject decode() on a reused element while its previous request changes.
-    const prepared = new Image();
-    prepared.src = url;
-    await prepared.decode();
-    if (request !== scanRequest || controller.signal.aborted) {
-      URL.revokeObjectURL(url);
-      return;
-    }
-    if (scanUrl) URL.revokeObjectURL(scanUrl);
-    scanUrl = url;
-    img.src = url;
-    img.alt = `${page.label}, archive leaf ${page.leaf}; complete printed page with critical apparatus`;
-    img.hidden = false;
-    el("allotment-scan-viewport").scrollTo(0, 0);
-    el("allotment-scan-status").textContent =
-      `${page.label}: checked against this edition’s retained bytes.`;
-  } catch (error) {
-    if (url) URL.revokeObjectURL(url);
-    if (request !== scanRequest || controller.signal.aborted) return;
-    el("allotment-scan-status").textContent =
-      `${error instanceof Error ? error.message : "The source page could not be loaded."} Use Reload page to retry. Your study has been kept.`;
-  }
-}
-function renderReading(): void {
-  const reading =
-    allotmentReadings.find((r) => r.id === select("allotment-reading").value) ??
-    allotmentReadings[2];
-  el("allotment-reference").textContent = `Constitution of the Athenians ${reading.reference}`;
-  el("allotment-greek").textContent = reading.greek;
-  el("allotment-english").textContent = reading.english;
-  el("allotment-editorial").textContent = reading.note;
-  el("allotment-words").innerHTML = reading.phrases
-    .map(
-      ([phrase], i) => `<button type="button" data-word="${i}" lang="grc">${esc(phrase)}</button>`,
-    )
-    .join("");
-  el("allotment-word-note").textContent =
-    "Choose a Greek phrase for its meaning and its role here.";
-  select("allotment-page").value = reading.leaf;
-  void loadScan();
-}
-select("allotment-reading").value = "cubes";
-renderReading();
-select("allotment-reading").addEventListener("change", renderReading);
-select("allotment-page").addEventListener("change", () => {
-  void loadScan();
-});
-on("allotment-retry", () => {
-  void loadScan();
-});
-el("allotment-words").addEventListener("click", (event) => {
-  const index = (event.target as HTMLElement).closest<HTMLButtonElement>("button[data-word]")
-    ?.dataset.word;
-  const reading = allotmentReadings.find((r) => r.id === select("allotment-reading").value);
-  const phrase = index === undefined ? null : reading?.phrases[Number(index)];
-  if (phrase) el("allotment-word-note").textContent = `${phrase[0]} (${phrase[1]}): ${phrase[2]}`;
-});
-on("allotment-zoom", () => {
-  const zoomed = button("allotment-zoom").getAttribute("aria-pressed") !== "true";
-  button("allotment-zoom").setAttribute("aria-pressed", String(zoomed));
-  el("allotment-scan-viewport").classList.toggle("enlarged", zoomed);
-  button("allotment-zoom").textContent = zoomed ? "Fit page" : "Enlarge page";
-  if (!zoomed) el("allotment-scan-viewport").scrollTo(0, 0);
-});
-el("allotment-scan-viewport").addEventListener("keydown", (event) => {
-  const offsets: Record<string, [number, number]> = {
-    ArrowUp: [0, -100],
-    ArrowDown: [0, 100],
-    ArrowLeft: [-100, 0],
-    ArrowRight: [100, 0],
-  };
-  const offset = offsets[event.key];
-  if (offset) {
-    event.preventDefault();
-    el("allotment-scan-viewport").scrollBy(...offset);
-  }
-});
+installSourceReader();
 el<HTMLTextAreaElement>("allotment-note").addEventListener("input", () => {
   record.note = el<HTMLTextAreaElement>("allotment-note").value;
   revision++;
@@ -490,4 +404,4 @@ el<HTMLInputElement>("allotment-open").addEventListener("change", async () => {
     input.value = "";
   }
 });
-installOffline(el("offline-status"));
+installOffline(el("offline-status"), "illustrated reading");

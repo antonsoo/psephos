@@ -93,6 +93,14 @@ export function releaseCube(study: Allotment, pick: (size: number) => number): A
     throw new Error("Invalid random choice.");
   return { ...structuredClone(study), draws: [...study.draws, choice < whiteLeft ? "W" : "B"] };
 }
+export function undoCube(study: Allotment): Allotment {
+  const draws = study.draws.slice(0, -1);
+  return {
+    ...structuredClone(study),
+    draws,
+    drawMode: draws.length ? study.drawMode : "random",
+  };
+}
 /** Colour strings, not distinguishable cubes: each has W! (R-W)! permutations. */
 export function allOrders(rows: number, whites: number): Cube[][] {
   const result: Cube[][] = [];

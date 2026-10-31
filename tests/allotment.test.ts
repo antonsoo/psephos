@@ -13,6 +13,7 @@ import {
   ratio,
   releaseCube,
   swapTickets,
+  undoCube,
 } from "../src/core/allotment";
 
 test("a fixed row couples its five tickets; different rows compete for a fixed quota", () => {
@@ -140,4 +141,16 @@ test("averaging independent letter placements changes the probability question",
   fixed.pair = ["A1", "A2"];
   assert.equal(ratio(beforePlacement(fixed).both), "1/6");
   assert.equal(ratio(beforePlacement(fixed).secondGivenFirst), "1/3");
+});
+
+test("undoing the entire chosen prefix leaves the next draw genuinely random", () => {
+  let study = newAllotment();
+  study.draws = ["W", "B", "W", "B"];
+  study.drawMode = "chosen";
+  study = undoCube(study);
+  assert.equal(study.drawMode, "chosen");
+  for (let i = 0; i < 3; i++) study = undoCube(study);
+  assert.deepEqual(study.draws, []);
+  assert.equal(study.drawMode, "random");
+  assert.equal(releaseCube(study, () => 0).drawMode, "random");
 });
