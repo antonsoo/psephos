@@ -1,0 +1,29 @@
+Psephos allotment workshop: source notice
+
+Ancient text: Constitution of the Athenians, conventionally attributed to
+Aristotle, chapters 63-65, late fourth century BCE. Ancient text is public domain.
+F. G. Kenyon, Aristotelis Atheniensium Respublica, Oxford, first published 1920.
+The retained copy's imprint lists reprints through 1958. The editor's printed
+supplies and critical apparatus remain visible. New selected transcriptions,
+close English, word notes, diagrams and instructional model: Anthony Mercer,
+2026, MIT (LICENSE.txt). These are a reading of this edition, not a new critical
+edition or an archaeological reconstruction.
+
+Complete PDF pages 76, 77, 78 were independently fetched and rendered 2026-10-31.
+Internet Archive: https://archive.org/details/aristotelisathen00aris
+PDF: https://archive.org/download/aristotelisathen00aris/aristotelisathen00aris.pdf
+PDF SHA-256: 2769f1feea49780c864ce0118723f02082df9177ede52ff511574f5fdcb9ba91
+
+Page 76: printed LXII, chapter 63.
+Page 77: printed LXIV, chapter 64. The expected sequential number is LXIII;
+this heading actually reads LXIV. We preserve it and identify by archive leaf.
+Page 78: also printed LXIV, chapter 64.5-66.1.
+Archive leaf numbers agree with these PDF page numbers for these pages.
+Rendering: pdftoppm -f 76 -l 78 -scale-to 2100 -jpeg -jpegopt quality=90.
+No cropping, retouching or colour correction.
+
+The shared title and imprint JPEGs retain their separate earlier provenance
+in sources/provenance.json. Font data: Literata and Source Sans 3 under their
+respective SIL Open Font Licenses, retained alongside the actual font files.
+The retained Perseus comparison transcription and museum photograph belong to
+the ballot lesson; they are not the exact source of these selected excerpts.

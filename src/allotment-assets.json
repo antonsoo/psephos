@@ -1,0 +1,88 @@
+[
+  {
+    "path": "LICENSE.txt",
+    "mime": "text/plain",
+    "bytes": 1071,
+    "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81"
+  },
+  {
+    "path": "fonts/literata-OFL.txt",
+    "mime": "text/plain",
+    "bytes": 4389,
+    "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+  },
+  {
+    "path": "fonts/literata.woff2",
+    "mime": "font/woff2",
+    "bytes": 396664,
+    "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db"
+  },
+  {
+    "path": "fonts/sourcesans3-OFL.txt",
+    "mime": "text/plain",
+    "bytes": 4486,
+    "sha256": "ed86f375d70bd39238d13b2ba5bd3bed20b3fe4847fa1356a63f380d2b26a8a5"
+  },
+  {
+    "path": "fonts/sourcesans3.woff2",
+    "mime": "font/woff2",
+    "bytes": 170188,
+    "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8"
+  },
+  {
+    "path": "sources/NOTICE.txt",
+    "mime": "text/plain",
+    "bytes": 3791,
+    "sha256": "907edba211d28b9a62599348b6545bda51f7d4f811fda1174be4261944914613"
+  },
+  {
+    "path": "sources/kenyon-imprint.jpg",
+    "mime": "image/jpeg",
+    "bytes": 204830,
+    "sha256": "96f51e16079965e31b99add41a6b71c3e28c32c279b5d34cced161b15ec65d2f",
+    "printedPage": "Imprint"
+  },
+  {
+    "path": "sources/kenyon-title.jpg",
+    "mime": "image/jpeg",
+    "bytes": 214963,
+    "sha256": "155e06a7ebf0670c3a7d8f8a998e33b9143bdc994c4aa693a8a11fbb6e1ecb86",
+    "printedPage": "Title page"
+  },
+  {
+    "path": "sources/provenance.json",
+    "mime": "application/json",
+    "bytes": 3765,
+    "sha256": "ca7ab5cbb5e0d3307c068b3ecdc4cbf5ecf9c4be162ff4d0bbdc5613646e8b79"
+  },
+  {
+    "path": "sources/kenyon-leaf76.jpg",
+    "mime": "image/jpeg",
+    "bytes": 527287,
+    "sha256": "bf3a3cca4bc30b275659b3a1278ad488c93c703789091933f4edffcb496d6a50"
+  },
+  {
+    "path": "sources/kenyon-leaf77.jpg",
+    "mime": "image/jpeg",
+    "bytes": 536153,
+    "sha256": "3447c785188478565385537024b21cff49c4b7488bc3208c4338c793c81dedfc"
+  },
+  {
+    "path": "sources/kenyon-leaf78.jpg",
+    "mime": "image/jpeg",
+    "bytes": 574876,
+    "sha256": "405b72d12f2425f37e26d3148c2814b778aa71dde0f231dc149be1fd3addd5aa"
+  },
+  {
+    "path": "sources/allotment-NOTICE.txt",
+    "mime": "text/plain",
+    "bytes": 1770,
+    "sha256": "12262e6a7a8498c315247518c7e0abd5ce33d292ec72733620a8ed1fcc7a9ac0"
+  },
+  {
+    "path": "sources/allotment-provenance.json",
+    "mime": "application/json",
+    "bytes": 1385,
+    "sha256": "f7dac2b717dd4772c098bf01c0010364f48286a5965ce02baf08b2ef95cd36d9"
+  }
+]

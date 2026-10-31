@@ -1,0 +1,37 @@
+{
+  "retrieved": "2026-10-31",
+  "edition": "F. G. Kenyon, Aristotelis Atheniensium Respublica, Oxford, first published 1920; retained imprint lists reprints through 1958",
+  "pdf": {
+    "url": "https://archive.org/download/aristotelisathen00aris/aristotelisathen00aris.pdf",
+    "sha256": "2769f1feea49780c864ce0118723f02082df9177ede52ff511574f5fdcb9ba91"
+  },
+  "renderCommand": "pdftoppm -f 76 -l 78 -scale-to 2100 -jpeg -jpegopt quality=90 INPUT.pdf OUTPUT",
+  "pages": [
+    {
+      "path": "sources/kenyon-leaf76.jpg",
+      "pdfPage": 76,
+      "archiveLeaf": 76,
+      "printedHeading": "LXII",
+      "contents": "63.1-5, with preceding 62"
+    },
+    {
+      "path": "sources/kenyon-leaf77.jpg",
+      "pdfPage": 77,
+      "archiveLeaf": 77,
+      "printedHeading": "LXIV",
+      "contents": "64.1-5; heading repeats next leaf instead of expected LXIII"
+    },
+    {
+      "path": "sources/kenyon-leaf78.jpg",
+      "pdfPage": 78,
+      "archiveLeaf": 78,
+      "printedHeading": "LXIV",
+      "contents": "64.5-66.1"
+    }
+  ],
+  "crosscheck": {
+    "url": "https://archive.org/stream/aristotelisathen00aris#page/n77/mode/1up",
+    "directJpegSha256": "47b3865263850c215a80f67d978aebeff1b42e48b3d7d0a54a96de1e4e7b2c51",
+    "method": "Independently viewed the full archive JPEG for leaf 77; same chapter, brackets, apparatus and repeated LXIV heading as PDF page 77."
+  }
+}
