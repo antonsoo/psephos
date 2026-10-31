@@ -1,0 +1,32 @@
+[
+  {
+    "browser": "chromium",
+    "allThreePagesControlled": true,
+    "realServerOutage": true,
+    "attendanceSourceDamageWithdrawsAllReadiness": true,
+    "editableWorkSavedDuringOutage": true,
+    "allThreeReadyAfterRepair": true,
+    "repairedSourceSha256": "bf3a3cca4bc30b275659b3a1278ad488c93c703789091933f4edffcb496d6a50",
+    "allThreeRecordsByteIdenticalAfterRecovery": [
+      "da4af015ccff125288113bb984ce5a168421b0c7279113a0ec232b6547740bab",
+      "da8cbe8e24749165898994a9d9c74570b963350ef17a80f5d527ba4d38564cfe",
+      "6b6de7db310a5f5f8749651c58493ef213b2b6dbaba03c5ae1d515641f1fdaf7"
+    ],
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "allThreePagesControlled": true,
+    "realServerOutage": true,
+    "attendanceSourceDamageWithdrawsAllReadiness": true,
+    "editableWorkSavedDuringOutage": true,
+    "allThreeReadyAfterRepair": true,
+    "repairedSourceSha256": "bf3a3cca4bc30b275659b3a1278ad488c93c703789091933f4edffcb496d6a50",
+    "allThreeRecordsByteIdenticalAfterRecovery": [
+      "da4af015ccff125288113bb984ce5a168421b0c7279113a0ec232b6547740bab",
+      "da8cbe8e24749165898994a9d9c74570b963350ef17a80f5d527ba4d38564cfe",
+      "6b6de7db310a5f5f8749651c58493ef213b2b6dbaba03c5ae1d515641f1fdaf7"
+    ],
+    "errors": []
+  }
+]

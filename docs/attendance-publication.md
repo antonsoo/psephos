@@ -42,7 +42,12 @@ No application request is redirected to a local successful response.
 The separate public ballot review operates casting, altered counts, deduction,
 source bytes, portable records, offline unanimity and old-record migration.
 Local review additionally stops the real server, damages retained files, and
-operates a waiting-edition migration across two workshops. Public offline mode
+operates a waiting-edition migration across two workshops. A final
+[three-workshop recovery](attendance-review/three-workshop-recovery.json) opens
+ballots, row selection and attendance together, damages the attendance source
+during an actual server outage, checks all three withdrawn readiness statuses,
+saves each editable study, reconnects and repairs the exact source hash, and
+requires every saved record to remain byte-identical after recovery. Public offline mode
 and a local physical server outage are distinct observations.
 
 All screenshots were visually inspected. The standalone example's explanation
@@ -55,6 +60,7 @@ Reproduce against the reviewed `dist/`:
 ```sh
 node scripts/public-workshops.mjs https://antonsoo.github.io/psephos/ test-results/public-workshops
 node scripts/public-browser.mjs https://antonsoo.github.io/psephos/ test-results/public-ballots
+node scripts/three-workshop-recovery.mjs
 ```
 
 A browser's verified offline edition can later be evicted by the browser.
