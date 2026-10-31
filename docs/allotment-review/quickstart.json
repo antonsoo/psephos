@@ -1,0 +1,16 @@
+[
+  {
+    "command": "npm run dev",
+    "port": 4382,
+    "operatedBoard": true,
+    "serviceWorker": false,
+    "errors": []
+  },
+  {
+    "command": "npm run preview",
+    "port": 4381,
+    "operatedBoard": true,
+    "serviceWorker": true,
+    "errors": []
+  }
+]

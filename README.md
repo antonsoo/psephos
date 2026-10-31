@@ -1,6 +1,6 @@
 # Psephos
 
-**Cast an unseen Athenian jury vote. Make the count visible.**
+**Move Athenian juror tickets, test their chances together, then cast a concealed vote. Read the Greek behind both procedures.**
 
 [![MIT license](https://img.shields.io/badge/code-MIT-26766c)](LICENSE)
 [![Live workbench](https://img.shields.io/badge/Live-workbench-153d39)](https://antonsoo.github.io/psephos/)
@@ -14,10 +14,65 @@ Both fit under the same grip. The chosen ballot goes into bronze, the unused
 one into wood. Count the wrong urn and you can reverse the apparent result.
 Replace a ballot and the total can stay right while the result changes.
 
-Psephos is an English-speaking learner's workbench for the procedure described
+The ballot workbench follows the procedure described
 in _Constitution of the Athenians_ 68.2–69.1. It joins a physical choice, a
 counting experiment, a deduction about hidden choices, and a close reading of the Greek.
 It does not invent a historical trial to win.
+
+## One cube, five tickets
+
+The new workshop in this checkout, **`allotment.html`**, asks whether two jurors
+enter the service pool together. Keep the first board, swap B1 with B2 using the
+actual slot buttons, then inspect every possible white/black cube order.
+
+| Four rows, two white cubes | A1 selected | B1 selected | Both selected |
+| -------------------------- | ----------- | ----------- | ------------- |
+| A1 and B1 share a row      | 1/2         | 1/2         | 1/2           |
+| B1 moves to another row    | 1/2         | 1/2         | 1/6           |
+
+![A moved ticket changes the joint chance while both individual chances remain one half](docs/assets/allotment-comparison-1440.png)
+
+A white cube decides a complete five-ticket row. The **placement is already
+fixed** in that calculation. Open “What if the placement is still random?” to
+change that assumption: independent uniform shuffles of different letter columns
+make the two selections independent before placement is known. The text does
+not establish those modern shuffle assumptions.
+
+Choose four, six or eight full rows and the white quota, track any two invented
+identities, shuffle within columns, release random cubes without replacement,
+or apply one of the completely enumerated colour orders as a **chosen** example.
+Kept boards retain their own pair, supply, placement and draw. Undo and reset make
+this an editable experiment, rather than a receipt of a physical lottery.
+
+Five close Greek/English readings cover the letter groups, ticket inserter,
+bronze cubes, his separate inclusion, and the later courtroom allotment. Word
+notes explain the role of each phrase. The complete chapter-64 page actually
+prints **LXIV** where sequential numbering would suggest LXIII; the next page
+also prints LXIV. Both headings remain visible, identified by archive leaf.
+The three new pages were independently rendered from the primary PDF and checked
+byte for byte, rather than inheriting an earlier source claim.
+
+Save editable JSON, exact CSV, a board SVG or a standalone illustrated reading
+with both experiments, all the Greek, fonts, licenses and five full source images.
+The reading works without scripts or a connection and prints to PDF. Study links
+include both boards and draws; your explanation stays out of the link. The new
+page does not autosave.
+
+This models **ordinary tickets on one small device**, not the complete historical
+procedure or its jury quota. The text also counts the previously chosen inserter;
+he is outside these row probabilities. Columns are letter groups within a tribe,
+not five tribes. A–E and the numbers are modern teaching identifiers. Both
+selected for service does not mean both assigned to the same courtroom.
+
+[Source, exact model and limits](docs/allotment-model.md) ·
+[Review and retained evidence](docs/allotment-review.md) ·
+[Editable example](examples/allotment-study.json) ·
+[Exact CSV](examples/allotment-study.csv) ·
+[SVG board](examples/allotment-board.svg) ·
+[Printed reading](examples/allotment-reading.pdf) ·
+[Illustrated reading, gzip-compressed](examples/allotment-reading.html.gz).
+Decompress the HTML before opening it. Local source and browser evidence are
+recorded separately from publication; no deployment of this addition is asserted.
 
 ## Try it
 
@@ -29,7 +84,9 @@ npm run check
 npm run dev
 ```
 
-Open **http://127.0.0.1:4382/psephos/**. For a production preview:
+Open **http://127.0.0.1:4382/psephos/** for ballots, or
+**http://127.0.0.1:4382/psephos/allotment.html** for the new board.
+For a production preview:
 
 ```sh
 npm run build
@@ -37,7 +94,7 @@ npm run preview
 ```
 
 Open **http://127.0.0.1:4381/psephos/**. Build output is **`dist/`**, using
-base **`/psephos/`**. Development uses a separate origin and installs no worker.
+base **`/psephos/`**; both `index.html` and `allotment.html` are entry points. Development uses a separate origin and installs no worker.
 The complete edition can be read offline after the production footer confirms
 that every file is retained. Production is served from `gh-pages`; source checks,
 clean-build identity and hosted-browser evidence are recorded separately in the

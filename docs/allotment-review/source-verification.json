@@ -1,0 +1,29 @@
+{
+  "pdfSha256": "2769f1feea49780c864ce0118723f02082df9177ede52ff511574f5fdcb9ba91",
+  "pages": [
+    {
+      "path": "sources/kenyon-leaf76.jpg",
+      "sha256": "bf3a3cca4bc30b275659b3a1278ad488c93c703789091933f4edffcb496d6a50",
+      "bytes": 527287,
+      "pdfPage": 76,
+      "printedHeading": "LXII",
+      "renderMatches": true
+    },
+    {
+      "path": "sources/kenyon-leaf77.jpg",
+      "sha256": "3447c785188478565385537024b21cff49c4b7488bc3208c4338c793c81dedfc",
+      "bytes": 536153,
+      "pdfPage": 77,
+      "printedHeading": "LXIV",
+      "renderMatches": true
+    },
+    {
+      "path": "sources/kenyon-leaf78.jpg",
+      "sha256": "405b72d12f2425f37e26d3148c2814b778aa71dde0f231dc149be1fd3addd5aa",
+      "bytes": 574876,
+      "pdfPage": 78,
+      "printedHeading": "LXIV",
+      "renderMatches": true
+    }
+  ]
+}

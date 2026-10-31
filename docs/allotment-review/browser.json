@@ -1,0 +1,62 @@
+[
+  {
+    "browser": "chromium",
+    "width": 1440,
+    "passed": true,
+    "keyboardPlacement": true,
+    "selectedExampleDistinguished": true,
+    "embeddedIdentities": 14,
+    "embeddedSourcePages": 5,
+    "a11yViolations": 0,
+    "realOutageReloadAndSameExport": true,
+    "crossPageDamageAndRepair": true,
+    "htmlSha256": "41a0ef6010786a6989571c481e83808ebb0dde9c11e7f38ff0ae8b0b1eda05c9",
+    "errors": [],
+    "external": []
+  },
+  {
+    "browser": "chromium",
+    "width": 375,
+    "passed": true,
+    "keyboardPlacement": true,
+    "selectedExampleDistinguished": true,
+    "embeddedIdentities": 14,
+    "embeddedSourcePages": 5,
+    "a11yViolations": 0,
+    "realOutageReloadAndSameExport": true,
+    "crossPageDamageAndRepair": true,
+    "htmlSha256": "41a0ef6010786a6989571c481e83808ebb0dde9c11e7f38ff0ae8b0b1eda05c9",
+    "errors": [],
+    "external": []
+  },
+  {
+    "browser": "firefox",
+    "width": 1440,
+    "passed": true,
+    "keyboardPlacement": true,
+    "selectedExampleDistinguished": true,
+    "embeddedIdentities": 14,
+    "embeddedSourcePages": 5,
+    "a11yViolations": 0,
+    "realOutageReloadAndSameExport": true,
+    "crossPageDamageAndRepair": true,
+    "htmlSha256": "41a0ef6010786a6989571c481e83808ebb0dde9c11e7f38ff0ae8b0b1eda05c9",
+    "errors": [],
+    "external": []
+  },
+  {
+    "browser": "firefox",
+    "width": 375,
+    "passed": true,
+    "keyboardPlacement": true,
+    "selectedExampleDistinguished": true,
+    "embeddedIdentities": 14,
+    "embeddedSourcePages": 5,
+    "a11yViolations": 0,
+    "realOutageReloadAndSameExport": true,
+    "crossPageDamageAndRepair": true,
+    "htmlSha256": "41a0ef6010786a6989571c481e83808ebb0dde9c11e7f38ff0ae8b0b1eda05c9",
+    "errors": [],
+    "external": []
+  }
+]

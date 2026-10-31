@@ -1,0 +1,7 @@
+{
+  "cases": 60,
+  "uniqueSetups": 60,
+  "renderedColourOrders": 1320,
+  "independentMethod": "fractions.Fraction closed forms and itertools.combinations; no application import",
+  "passed": true
+}

@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.3.0 — 2026-10-31
+
+- Add a five-column ordinary-ticket allotment board, keeping two identities
+  visible through swaps, independent column shuffles and row decisions.
+- Count exact fixed-placement chances and every compatible white/black order;
+  compare them with a separately stated unknown-placement experiment.
+- Preserve kept experiments, random/chosen draw modes and explanations in
+  editable files; omit the explanation from explicit shared links.
+- Read five passages of chapters 63–64 with new close English and word notes,
+  retaining whole primary pages and their repeated LXIV headings.
+- Save exact CSV, accessible SVG and script-free illustrated readings with
+  verified embedded source images, fonts and licenses.
+- Give both entry points the same offline edition; reject stale metadata on
+  rebuild, source substitution, late page responses and cross-page cache damage.
+- Decode source images separately before replacing the visible witness, fixing
+  an observed Firefox image-switch race.
+
 ## 0.2.0 — 2026-10-30
 
 - Withdraw offline readiness immediately when verified assets or native image

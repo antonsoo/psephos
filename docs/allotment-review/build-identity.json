@@ -1,0 +1,197 @@
+{
+  "files": [
+    {
+      "path": "LICENSE.txt",
+      "bytes": 1071,
+      "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "allotment.html",
+      "bytes": 11620,
+      "sha256": "954ec7696b383886311f0f89ee05aebb53b8414bb87ceb46b1bc1d08c6fe112c",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "assets/allotment-6bf6bbIz.js",
+      "bytes": 39302,
+      "sha256": "c432e1f38d68a8a7f587c4590b7aabeed159747310f5f9945cf801c34f05f334",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "assets/allotment-ByPXA8Ve.css",
+      "bytes": 3871,
+      "sha256": "3f6ccf2f20d26ee32ee69d318160c0f5ca2adbc5dc51acb0a22c32071ce12800",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "assets/ballots-BhDDoOfs.js",
+      "bytes": 52118,
+      "sha256": "8950e113c4e5d4b4148d8cbd621206b6545ffa137b98796ac5ac06d5e1a66e81",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "assets/offline-ANBKvRoq.js",
+      "bytes": 6804,
+      "sha256": "6204b36eb77d961cb430e397cd0254962b0fac6dc3e6b093d5e7363900905079",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "assets/offline-Dk6HhNuE.css",
+      "bytes": 14635,
+      "sha256": "7c600bc0a1c767ba9cd8bd43f277740f7afc32bb1d5de29772fc5f3a22d85ea0",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 291,
+      "sha256": "7bdcefd50abdaa41d4b05a497420be430c31b67df2cc01b23727ce1b2d40c74c",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "fonts/literata-OFL.txt",
+      "bytes": 4389,
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "fonts/literata.woff2",
+      "bytes": 396664,
+      "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "fonts/provenance.json",
+      "bytes": 637,
+      "sha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "fonts/sourcesans3-OFL.txt",
+      "bytes": 4486,
+      "sha256": "ed86f375d70bd39238d13b2ba5bd3bed20b3fe4847fa1356a63f380d2b26a8a5",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "fonts/sourcesans3.woff2",
+      "bytes": 170188,
+      "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "index.html",
+      "bytes": 16480,
+      "sha256": "79c627c84e55de03d2fcb24a129a1bfa98325621f0e0603f9de52befa0f2b71f",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sources/CC-BY-SA-4.0.txt",
+      "bytes": 20138,
+      "sha256": "28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sources/NOTICE.txt",
+      "bytes": 3791,
+      "sha256": "907edba211d28b9a62599348b6545bda51f7d4f811fda1174be4261944914613",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sources/agora-ballots.jpg",
+      "bytes": 172863,
+      "sha256": "89d926d1e094338f1bdd20234973548fd2f995ef26463cb11550417cda148df3",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sources/allotment-NOTICE.txt",
+      "bytes": 1770,
+      "sha256": "12262e6a7a8498c315247518c7e0abd5ce33d292ec72733620a8ed1fcc7a9ac0",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sources/allotment-manifest.json",
+      "bytes": 2534,
+      "sha256": "cd0003b3499d0b6afd00a230a79fe8a777484c884b9c5b270239ac86eed4de1f",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sources/allotment-provenance.json",
+      "bytes": 1385,
+      "sha256": "f7dac2b717dd4772c098bf01c0010364f48286a5965ce02baf08b2ef95cd36d9",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sources/kenyon-imprint.jpg",
+      "bytes": 204830,
+      "sha256": "96f51e16079965e31b99add41a6b71c3e28c32c279b5d34cced161b15ec65d2f",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sources/kenyon-leaf76.jpg",
+      "bytes": 527287,
+      "sha256": "bf3a3cca4bc30b275659b3a1278ad488c93c703789091933f4edffcb496d6a50",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sources/kenyon-leaf77.jpg",
+      "bytes": 536153,
+      "sha256": "3447c785188478565385537024b21cff49c4b7488bc3208c4338c793c81dedfc",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sources/kenyon-leaf78.jpg",
+      "bytes": 574876,
+      "sha256": "405b72d12f2425f37e26d3148c2814b778aa71dde0f231dc149be1fd3addd5aa",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sources/kenyon-p67.jpg",
+      "bytes": 823814,
+      "sha256": "a0041cfca79448bf40204d66308c73e5dbb5aa51a7ce186894b9f4114963bc71",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sources/kenyon-p68.jpg",
+      "bytes": 887885,
+      "sha256": "459982e373f32e0e9fe0c4068d352dc593a05aba533262b58dc3255c75eda300",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sources/kenyon-title.jpg",
+      "bytes": 214963,
+      "sha256": "155e06a7ebf0670c3a7d8f8a998e33b9143bdc994c4aa693a8a11fbb6e1ecb86",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sources/manifest.json",
+      "bytes": 2751,
+      "sha256": "b0db5528eb81c924b26ee6f64fa481382eefe3ad6d32332fa6537ca7cb735325",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sources/perseus-grc2.xml",
+      "bytes": 264047,
+      "sha256": "6e0c298a511e05d9e287860f1c98344f4c409ed5f6f18e8c9ef0cb6974ae8e1a",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sources/provenance.json",
+      "bytes": 3765,
+      "sha256": "ca7ab5cbb5e0d3307c068b3ecdc4cbf5ecf9c4be162ff4d0bbdc5613646e8b79",
+      "cleanBuildMatches": true
+    },
+    {
+      "path": "sw.js",
+      "bytes": 8051,
+      "sha256": "ed4765157f6707f546edcefb456b09dc330fc74ea54adfc5f533c5dcd0556641",
+      "cleanBuildMatches": true
+    }
+  ],
+  "fileCount": 31,
+  "bytes": 4973459,
+  "localBuildsMatch": true,
+  "hostedCompared": false,
+  "sourceRevision": "016ce9a",
+  "cleanInstallNode": "26.7.0",
+  "cleanInstallNpm": "12.0.1"
+}

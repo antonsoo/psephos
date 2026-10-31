@@ -1,0 +1,37 @@
+{
+  "editionA": "a1d6a6bf691812b3b905",
+  "editionB": "88294f2b05fcf6f2426e",
+  "workerBuilderSha256": "40b4e319b020556cab44ec91fcc2fcc4fa4c8aef20460e9b0f194791b50e904e",
+  "results": [
+    {
+      "browser": "chromium",
+      "initialEdition": "a1d6a6bf691812b3b905",
+      "explicitOfflineIntegrityFailureWithdrawsReadiness": true,
+      "nativeImageFailureWithdrawsReadiness": true,
+      "otherOpenPageAutomaticallyWithdrawsReadiness": true,
+      "repeatedFailureNotificationsCoalesced": true,
+      "otherEditionCacheNotUsed": true,
+      "uncachedNavigationNotInvented": true,
+      "connectedRecovery": true,
+      "foreignReadinessEventsIgnored": true,
+      "oldEditionKeptWhileOpen": true,
+      "nextEditionActivatedAfterClose": true,
+      "explanationPreservedAcrossUpdate": true
+    },
+    {
+      "browser": "firefox",
+      "initialEdition": "a1d6a6bf691812b3b905",
+      "explicitOfflineIntegrityFailureWithdrawsReadiness": true,
+      "nativeImageFailureWithdrawsReadiness": true,
+      "otherOpenPageAutomaticallyWithdrawsReadiness": true,
+      "repeatedFailureNotificationsCoalesced": true,
+      "otherEditionCacheNotUsed": true,
+      "uncachedNavigationNotInvented": true,
+      "connectedRecovery": true,
+      "foreignReadinessEventsIgnored": true,
+      "oldEditionKeptWhileOpen": true,
+      "nextEditionActivatedAfterClose": true,
+      "explanationPreservedAcrossUpdate": true
+    }
+  ]
+}
