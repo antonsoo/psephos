@@ -1,9 +1,9 @@
 {
   "name": "@antonsoloviev/psephos",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
-  "description": "Cast a concealed Athenian jury ballot, count the right urn, and read the Greek that decides a tie.",
+  "description": "Operate Athenian jury attendance, row allotment and concealed voting; read the Greek and inspect the exact chances.",
   "author": "Anthony Mercer <anthony@praviel.com>",
   "license": "MIT",
   "repository": {
@@ -18,7 +18,9 @@
     "ballots",
     "aristotle",
     "education",
-    "history"
+    "history",
+    "sortition",
+    "probability"
   ],
   "engines": {
     "node": ">=24"
@@ -37,7 +39,11 @@
     "test:audit": "node scripts/offline-audit.mjs",
     "test:public": "node scripts/public-browser.mjs",
     "test:allotment": "node scripts/allotment-browser.mjs",
-    "verify:allotment-source": "python3 scripts/verify-allotment-sources.py"
+    "verify:allotment-source": "python3 scripts/verify-allotment-sources.py",
+    "test:allotment-audit": "node scripts/allotment-audit.mjs",
+    "test:attendance": "node scripts/attendance-browser.mjs",
+    "test:attendance-faults": "node scripts/attendance-faults.mjs",
+    "test:update": "node scripts/update-journey.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",
