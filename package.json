@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Operate Athenian jury attendance, row allotment and concealed voting; read the Greek and inspect the exact chances.",
   "author": "Anthony Mercer <anthony@praviel.com>",
-  "license": "MIT",
+  "license": "PolyForm-Noncommercial-1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/antonsoo/psephos.git"

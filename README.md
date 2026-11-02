@@ -2,7 +2,7 @@
 
 **Who turns up? Who gets selected? What does the count reveal? Operate three Athenian jury experiments and read their Greek.**
 
-[![MIT license](https://img.shields.io/badge/code-MIT-26766c)](LICENSE)
+[![PolyForm Noncommercial license](https://img.shields.io/badge/code-PolyForm%20Noncommercial-26766c)](LICENSE)
 [![Live workbench](https://img.shields.io/badge/Live-workbench-153d39)](https://antonsoo.github.io/psephos/)
 
 ![The ballot pair beside an isolated view of its concealed axle ends](docs/assets/workbench-1440.png)
@@ -321,8 +321,10 @@ See the [source notice](public/sources/NOTICE.txt),
 
 ## Contributing and license
 
+New versions are released under the [PolyForm Noncommercial License 1.0.0](LICENSE). It is free for any noncommercial purpose, including personal study, teaching and research, and for use by charities, schools, universities, research organizations and government institutions. Commercial use needs written permission from Anthony Mercer (anthony@praviel.com). Versions up to commit [`2909786`](https://github.com/antonsoo/psephos/tree/2909786) (2026-11-01) were released under the MIT License, and copies of those versions keep it.
+
 See [CONTRIBUTING.md](CONTRIBUTING.md). Code, original diagrams, notes and new
-translations are [MIT](LICENSE). The historical print is public domain in the
+translations are [PolyForm Noncommercial 1.0.0](LICENSE). The historical print is public domain in the
 United States. The Perseus comparison XML and the photograph retain CC BY-SA
 4.0; fonts retain their SIL Open Font Licenses. Every standalone record carries
 these separate notices and licenses.

@@ -2,8 +2,8 @@
   {
     "path": "LICENSE.txt",
     "mime": "text/plain",
-    "bytes": 1071,
-    "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81"
+    "bytes": 4653,
+    "sha256": "90650593cc281c8f70ae9bfc3d60cbb73fa2685d1bec7d415d4231ad5a721d7a"
   },
   {
     "path": "fonts/literata-OFL.txt",
@@ -44,8 +44,8 @@
   {
     "path": "sources/NOTICE.txt",
     "mime": "text/plain",
-    "bytes": 3791,
-    "sha256": "907edba211d28b9a62599348b6545bda51f7d4f811fda1174be4261944914613"
+    "bytes": 3829,
+    "sha256": "0ad49f0a9402280daac8f499b8cad9a60baf19121a99dc42349a16134fe02291"
   },
   {
     "path": "sources/agora-ballots.jpg",

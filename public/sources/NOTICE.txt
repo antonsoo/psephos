@@ -21,7 +21,7 @@ rendering changes scale and compression; it does not crop or alter the text.
 The selected Greek was transcribed from these images. Square brackets in the
 printed main text are retained. Sentence punctuation, apostrophe glyphs and
 capitalization at excerpt openings are normalized. New close English and word
-notes are by Anthony Mercer, MIT license. The work is conventionally attributed
+notes are by Anthony Mercer, PolyForm Noncommercial license. The work is conventionally attributed
 to Aristotle; its individual authorship is debated. It describes late fourth
 century BCE institutions, not all Athenian history.
 
@@ -49,7 +49,7 @@ Object comparison consulted, no photograph reproduced: Canellopoulos Museum,
 'Bronze juridical ballot', collection X 600, fourth century BCE.
 https://camu.gr/en/item/chalkini-dikastiki-psifos/
 
-Code, new diagrams and translations: MIT (public/LICENSE.txt).
+Code, new diagrams and translations: PolyForm Noncommercial (public/LICENSE.txt).
 Fonts: Literata and Source Sans 3, SIL Open Font License, files in ../fonts/.
 CC BY-SA material retains its own license within the collection and exports.
 

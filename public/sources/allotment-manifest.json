@@ -2,8 +2,8 @@
   {
     "path": "LICENSE.txt",
     "mime": "text/plain",
-    "bytes": 1071,
-    "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81"
+    "bytes": 4653,
+    "sha256": "90650593cc281c8f70ae9bfc3d60cbb73fa2685d1bec7d415d4231ad5a721d7a"
   },
   {
     "path": "fonts/literata-OFL.txt",
@@ -32,8 +32,8 @@
   {
     "path": "sources/NOTICE.txt",
     "mime": "text/plain",
-    "bytes": 3791,
-    "sha256": "907edba211d28b9a62599348b6545bda51f7d4f811fda1174be4261944914613"
+    "bytes": 3829,
+    "sha256": "0ad49f0a9402280daac8f499b8cad9a60baf19121a99dc42349a16134fe02291"
   },
   {
     "path": "sources/kenyon-imprint.jpg",
@@ -76,8 +76,8 @@
   {
     "path": "sources/allotment-NOTICE.txt",
     "mime": "text/plain",
-    "bytes": 1770,
-    "sha256": "12262e6a7a8498c315247518c7e0abd5ce33d292ec72733620a8ed1fcc7a9ac0"
+    "bytes": 1789,
+    "sha256": "1739920c106d85852d9f833be8a36742402b718a6cee2cf09f3ee10377c1569d"
   },
   {
     "path": "sources/allotment-provenance.json",
